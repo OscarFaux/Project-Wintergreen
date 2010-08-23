@@ -1,0 +1,5 @@
+*.rsc filter=lfs diff=lfs merge=lfs -text
+*.dmb filter=lfs diff=lfs merge=lfs -text
+*.dmi filter=lfs diff=lfs merge=lfs -text
+*.ogg filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text
