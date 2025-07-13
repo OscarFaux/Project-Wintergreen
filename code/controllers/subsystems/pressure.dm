@@ -108,6 +108,5 @@
 		for(var/obj/structure/window/Win in floodArea)
 			if(prob(50))
 				qdel(Win)
-
-		world << "<span class='alert'>[floodArea.name] is rapidly flooding as water bursts in!</span>"
-		// playsound(world, 'sound/machines/alert1.ogg', 100, TRUE)
+        // Broadcast on the Engineering radio channel:
+		world << ":e <span class='alert'><b>" + floodArea.name + " is rapidly flooding as water bursts in!</b></span>"
