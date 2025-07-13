@@ -20,9 +20,9 @@
 /datum/controller/subsystem/pressure
 	name = "Pressure"
 	init_order = INIT_ORDER_LATE
-	wait = 20
+	wait = 50
 	priority = 50
-	flags = SS_BACKGROUND | SS_NO_FIRE_FIRST_TICK
+	flags = SS_TICKER
 
 	var/list/pressure_boundaries = list()
 
@@ -37,7 +37,7 @@
 			Win.pressure_threshold = 303
 			Win.time_to_fail = 100
 			pressure_boundaries += Win
-	return INITIALIZE_SUCCESS
+	return SS_INIT_SUCCESS
 
 /datum/controller/subsystem/pressure/fire()
 	for(var/atom/A in pressure_boundaries.Copy())
@@ -59,7 +59,7 @@
 				var/obj/structure/window/W = A
 				if(!W.cracking)
 					W.cracking = TRUE
-					// playsound(W, 'sound/effects/glass_crack.ogg', 100, TRUE)
+					playsound(W, 'sound/effects/GlassFracture02.ogg', 100, TRUE)
 					spawn(W.time_to_fail)
 						if(W && !QDELETED(W))
 							handle_blowout(W, depth)
