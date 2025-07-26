@@ -232,11 +232,12 @@
 
 //WINTERGREEN edits
 //Luna Faux
-/obj/item/pda/captain/vanillapda
+/obj/item/pda/captain/fluff/vanillapda
     name = "Vanilla's PDA"
     desc = "A mint green and white vintage PDA with a built in music player! has a sticker of a red dragon on the back"
     icon = 'icons/vore/custom_items_vr.dmi'
     icon_state = "pda-VAN"
+    default_cartridge = /obj/item/cartridge/captain
 
 /obj/item/modular_computer/laptop/preset/custom_loadout/hybrid/vanilla
 	name = "Special Laptop"

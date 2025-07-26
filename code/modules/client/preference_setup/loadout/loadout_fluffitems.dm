@@ -48,7 +48,7 @@
 	character_name = list("Luna Fox", "VA-N177-A Fox", "Vanilla Fox", "Kipp S'Jet")
 
 /datum/gear/fluff/vanilla_pda
-	path = /obj/item/pda/captain/vanillapda
+	path = /obj/item/pda/captain/fluff/vanillapda
 	display_name = "Vanilla's PDA"
 	ckeywhitelist = list("lunafaux")
 	character_name = list("Luna Fox", "VA-N177-A Fox", "Vanilla Fox", "Kipp S'Jet")
