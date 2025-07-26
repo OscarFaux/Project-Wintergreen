@@ -1,272 +1,272 @@
 macro "borghotkeymode"
-	elem
+	elem 
 		name = "TAB"
 		command = ".winset \"mainwindow.macro=borgmacro hotkey_toggle.is-checked=false input.focus=true\""
-	elem
+	elem 
 		name = "Shift"
 		command = "KeyDown Shift"
-	elem
+	elem 
 		name = "Shift+UP"
 		command = "KeyUp Shift"
-	elem
+	elem 
 		name = "Ctrl"
 		command = "KeyDown Ctrl"
-	elem
+	elem 
 		name = "Ctrl+UP"
 		command = "KeyUp Ctrl"
-	elem
+	elem 
 		name = "Alt"
 		command = "KeyDown Alt"
-	elem
+	elem 
 		name = "Alt+UP"
 		command = "KeyUp Alt"
-	elem
+	elem 
 		name = "NORTHEAST"
 		command = ".northeast"
-	elem
+	elem 
 		name = "SOUTHEAST"
 		command = ".southeast"
-	elem
+	elem 
 		name = "SOUTHWEST"
 		command = ".southwest"
-	elem
+	elem 
 		name = "NORTHWEST"
 		command = ".northwest"
-	elem
+	elem 
 		name = "ALT+WEST"
 		command = "westfaceperm"
-	elem
+	elem 
 		name = "CTRL+WEST"
 		command = "westface"
-	elem
+	elem 
 		name = "West"
 		command = "KeyDown West"
-	elem
+	elem 
 		name = "West+UP"
 		command = "KeyUp West"
-	elem
+	elem 
 		name = "ALT+NORTH"
 		command = "northfaceperm"
-	elem
+	elem 
 		name = "CTRL+NORTH"
 		command = "northface"
-	elem
+	elem 
 		name = "North"
 		command = "KeyDown North"
-	elem
+	elem 
 		name = "North+UP"
 		command = "KeyUp North"
-	elem
+	elem 
 		name = "ALT+EAST"
 		command = "eastfaceperm"
-	elem
+	elem 
 		name = "CTRL+EAST"
 		command = "eastface"
-	elem
+	elem 
 		name = "East"
 		command = "KeyDown East"
-	elem
+	elem 
 		name = "East+UP"
 		command = "KeyUp East"
-	elem
+	elem 
 		name = "ALT+SOUTH"
 		command = "southfaceperm"
-	elem
+	elem 
 		name = "CTRL+SOUTH"
 		command = "southface"
-	elem
+	elem 
 		name = "South"
 		command = "KeyDown South"
-	elem
+	elem 
 		name = "South+UP"
 		command = "KeyUp South"
-	elem
+	elem 
 		name = "CTRL+SHIFT+NORTH"
 		command = "shiftnorth"
-	elem
+	elem 
 		name = "CTRL+SHIFT+SOUTH"
 		command = "shiftsouth"
-	elem
+	elem 
 		name = "CTRL+SHIFT+WEST"
 		command = "shiftwest"
-	elem
+	elem 
 		name = "CTRL+SHIFT+EAST"
 		command = "shifteast"
-	elem
+	elem 
 		name = "INSERT"
 		command = "a-intent right"
-	elem
+	elem 
 		name = "DELETE"
 		command = "delete-key-pressed"
-	elem
+	elem 
 		name = "1"
 		command = "toggle-module 1"
-	elem
+	elem 
 		name = "CTRL+1"
 		command = "toggle-module 1"
-	elem
+	elem 
 		name = "2"
 		command = "toggle-module 2"
-	elem
+	elem 
 		name = "CTRL+2"
 		command = "toggle-module 2"
-	elem
+	elem 
 		name = "3"
 		command = "toggle-module 3"
-	elem
+	elem 
 		name = "CTRL+3"
 		command = "toggle-module 3"
-	elem
+	elem 
 		name = "4"
 		command = "a-intent left"
-	elem
+	elem 
 		name = "CTRL+4"
 		command = "a-intent left"
-	elem
+	elem 
 		name = "5"
 		command = "Me-verb"
-	elem
+	elem 
 		name = "6"
 		command = "Subtle-verb"
-	elem
+	elem 
 		name = "A"
 		command = "KeyDown A"
-	elem
+	elem 
 		name = "A+UP"
 		command = "KeyUp A"
-	elem
+	elem 
 		name = "D"
 		command = "KeyDown D"
-	elem
+	elem 
 		name = "D+UP"
 		command = "KeyUp D"
-	elem
+	elem 
 		name = "F"
 		command = "a-intent left"
-	elem
+	elem 
 		name = "CTRL+F"
 		command = "a-intent left"
-	elem
+	elem 
 		name = "G"
 		command = "a-intent right"
-	elem
+	elem 
 		name = "CTRL+G"
 		command = "a-intent right"
-	elem
+	elem 
 		name = "J"
 		command = "toggle-gun-mode"
-	elem
+	elem 
 		name = "CTRL+J"
 		command = "toggle-gun-mode"
-	elem
+	elem 
 		name = "Q"
 		command = "unequip-module"
-	elem
+	elem 
 		name = "CTRL+Q"
 		command = "unequip-module"
-	elem
+	elem 
 		name = "R"
 		command = ".southwest"
-	elem
+	elem 
 		name = "CTRL+R"
 		command = ".southwest"
 	elem "s_key"
 		name = "S"
 		command = "KeyDown S"
-	elem
+	elem 
 		name = "S+UP"
 		command = "KeyUp S"
-	elem
+	elem 
 		name = "T"
 		command = "Say-verb"
 	elem "w_key"
 		name = "W"
 		command = "KeyDown W"
-	elem
+	elem 
 		name = "W+UP"
 		command = "KeyUp W"
-	elem
+	elem 
 		name = "X"
 		command = ".northeast"
-	elem
+	elem 
 		name = "CTRL+X"
 		command = ".northeast"
-	elem
+	elem 
 		name = "Y"
 		command = "Whisper-verb"
-	elem
+	elem 
 		name = "CTRL+Y"
 		command = "Whisper-verb"
-	elem
+	elem 
 		name = "Z"
 		command = "Activate-Held-Object"
-	elem
+	elem 
 		name = "CTRL+Z"
 		command = "Robot-Activate-Held-Object"
-	elem
+	elem 
 		name = "U"
 		command = "Rest"
-	elem
+	elem 
 		name = "NUMPAD1"
 		command = "body-r-leg"
-	elem
+	elem 
 		name = "NUMPAD2"
 		command = "body-groin"
-	elem
+	elem 
 		name = "NUMPAD3"
 		command = "body-l-leg"
-	elem
+	elem 
 		name = "NUMPAD4"
 		command = "body-r-arm"
-	elem
+	elem 
 		name = "NUMPAD5"
 		command = "body-chest"
-	elem
+	elem 
 		name = "NUMPAD6"
 		command = "body-l-arm"
-	elem
+	elem 
 		name = "NUMPAD8"
 		command = "body-toggle-head"
-	elem
+	elem 
 		name = "F1"
 		command = "request-help"
-	elem
+	elem 
 		name = "CTRL+SHIFT+F1+REP"
 		command = ".options"
-	elem
+	elem 
 		name = "F2"
 		command = "ooc"
-	elem
+	elem 
 		name = "F2+REP"
 		command = ".screenshot auto"
-	elem
+	elem 
 		name = "SHIFT+F2+REP"
 		command = ".screenshot"
-	elem
+	elem 
 		name = "F3"
 		command = "Say-verb"
-	elem
+	elem 
 		name = "F4"
 		command = "Me-verb"
-	elem
+	elem 
 		name = "F5"
 		command = "asay"
-	elem
+	elem 
 		name = "F6"
 		command = "Player-Panel-New"
-	elem
+	elem 
 		name = "F7"
 		command = "Admin-PM"
-	elem
+	elem 
 		name = "F8"
 		command = "Invisimin"
-	elem
+	elem 
 		name = "F12"
 		command = "F12"
-	elem
+	elem 
 		name = "CTRL+SHIFT+ADD"
 		command = "planeup"
-	elem
+	elem 
 		name = "CTRL+SHIFT+SUBTRACT"
 		command = "planedown"
 
@@ -1023,42 +1023,43 @@ macro "borgmacro"
 		name = "CTRL+SHIFT+SUBTRACT"
 		command = "planedown"
 
+
 menu "menu"
-	elem
+	elem 
 		name = "&File"
 		command = ""
 		saved-params = "is-checked"
-	elem
+	elem 
 		name = "&Quick screenshot\tF2"
 		command = ".screenshot auto"
 		category = "&File"
 		saved-params = "is-checked"
-	elem
+	elem 
 		name = "&Save screenshot as...\tShift+F2"
 		command = ".screenshot"
 		category = "&File"
 		saved-params = "is-checked"
-	elem
+	elem 
 		name = "&Reconnect"
 		command = ".reconnect"
 		category = "&File"
 		saved-params = "is-checked"
-	elem
+	elem 
 		name = "&Check ping"
 		command = ".ping"
 		category = "&File"
 		saved-params = "is-checked"
-	elem
+	elem 
 		name = ""
 		command = ""
 		category = "&File"
 		saved-params = "is-checked"
-	elem
+	elem 
 		name = "&Quit"
 		command = ".quit"
 		category = "&File"
 		saved-params = "is-checked"
-	elem
+	elem 
 		name = "&Icons"
 		command = ""
 		saved-params = "is-checked"
@@ -1105,7 +1106,7 @@ menu "menu"
 		can-check = true
 		group = "size"
 		saved-params = "is-checked"
-	elem
+	elem 
 		name = ""
 		command = ""
 		category = "&Icons"
@@ -1116,7 +1117,7 @@ menu "menu"
 		category = "&Icons"
 		can-check = true
 		saved-params = "is-checked"
-	elem
+	elem 
 		name = "&Scaling"
 		command = ""
 		saved-params = "is-checked"
@@ -1141,34 +1142,35 @@ menu "menu"
 		can-check = true
 		group = "scale"
 		saved-params = "is-checked"
-	elem
+	elem 
 		name = "&Help"
 		command = ""
 		saved-params = "is-checked"
-	elem
+	elem 
 		name = "&Admin help\tF1"
 		command = "request-help"
 		category = "&Help"
 		saved-params = "is-checked"
-	elem
+	elem 
 		name = "&Hotkeys"
 		command = "hotkeys-help"
 		category = "&Help"
 		saved-params = "is-checked"
-	elem
+	elem 
 		name = "&Preferences"
 		command = ""
 		saved-params = "is-checked"
-	elem
+	elem 
 		name = "&Character Setup"
 		command = "character-setup"
 		category = "&Preferences"
 		saved-params = "is-checked"
-	elem
+	elem 
 		name = "&Game Options"
 		command = "game-options"
 		category = "&Preferences"
 		saved-params = "is-checked"
+
 
 window "mainwindow"
 	elem "mainwindow"
@@ -1177,20 +1179,27 @@ window "mainwindow"
 		size = 640x440
 		anchor1 = -1,-1
 		anchor2 = -1,-1
+		background-color = none
 		is-default = true
 		saved-params = "pos;size;is-minimized;is-maximized"
-		title = "VOREStation"
-		is-maximized = true
+		title = "Project Wintergreen"
 		statusbar = false
+		is-maximized = true
 		icon = 'icons\\virgoicon.png'
 		macro = "macro"
 		menu = "menu"
+		outer-size = 1936x1048
+		outer-pos = -8,-8
+		inner-size = 1920x989
+		inner-pos = 8,51
+		screen-size = 1920x1032
 	elem "asset_cache_browser"
 		type = BROWSER
 		pos = 0,0
 		size = 200x200
 		anchor1 = -1,-1
 		anchor2 = -1,-1
+		background-color = none
 		is-visible = false
 		saved-params = ""
 	elem "tgui_shock"
@@ -1199,6 +1208,7 @@ window "mainwindow"
 		size = 200x200
 		anchor1 = -1,-1
 		anchor2 = -1,-1
+		background-color = none
 		is-visible = false
 		saved-params = ""
 	elem "hotkey_toggle"
@@ -1207,6 +1217,7 @@ window "mainwindow"
 		size = 80x20
 		anchor1 = 100,100
 		anchor2 = -1,-1
+		background-color = none
 		saved-params = ""
 		text = "Hotkey Toggle"
 		command = ".winset \"mainwindow.macro!=macro ? mainwindow.macro=macro hotkey_toggle.is-checked=false input.focus=true : mainwindow.macro=hotkeymode hotkey_toggle.is-checked=true mapwindow.map.focus=true\""
@@ -1217,6 +1228,7 @@ window "mainwindow"
 		size = 634x400
 		anchor1 = 0,0
 		anchor2 = 100,100
+		background-color = none
 		saved-params = "splitter"
 		right = "rpane"
 		is-vert = true
@@ -1236,16 +1248,18 @@ window "mainwindow"
 		size = 517x16
 		anchor1 = 0,100
 		anchor2 = 100,100
-		is-visible = true
+		background-color = none
+		border = line
+		saved-params = ""
 		text = ""
 		align = left
-		border = line
 	elem "saybutton"
 		type = BUTTON
 		pos = 520,400
 		size = 40x20
 		anchor1 = 100,100
 		anchor2 = -1,-1
+		background-color = none
 		saved-params = "is-checked"
 		text = "Chat"
 		command = ".winset \"saybutton.is-checked=true?input.command=\"!say \\\"\" macrobutton.is-checked=false:input.command=\""
@@ -1256,15 +1270,16 @@ window "mainwindow"
 		size = 999x999
 		anchor1 = -1,-1
 		anchor2 = -1,-1
+		background-color = none
 		is-visible = false
 		saved-params = ""
 	elem "commandbar_spy"
 		type = BROWSER
-		is-default = false
 		pos = 0,0
 		size = 200x200
 		anchor1 = -1,-1
 		anchor2 = -1,-1
+		background-color = none
 		is-visible = false
 		saved-params = ""
 
@@ -1298,9 +1313,10 @@ window "mapwindow"
 		size = 640,480
 		anchor1 = 0,0
 		anchor2 = 100,100
+		background-color = #222222
 		is-visible = false
 		is-disabled = true
-		background-color = #222222
+		saved-params = ""
 
 window "outputwindow"
 	elem "outputwindow"
@@ -1309,7 +1325,6 @@ window "outputwindow"
 		size = 640x480
 		anchor1 = -1,-1
 		anchor2 = -1,-1
-		background-color = none
 		saved-params = "pos;size;is-minimized;is-maximized"
 		is-pane = true
 	elem "legacy_output_selector"
@@ -1329,7 +1344,6 @@ window "output_legacy"
 		size = 640x480
 		anchor1 = -1,-1
 		anchor2 = -1,-1
-		background-color = none
 		saved-params = "pos;size;is-minimized;is-maximized"
 		is-pane = true
 	elem "output"
@@ -1350,7 +1364,6 @@ window "output_browser"
 		size = 640x480
 		anchor1 = -1,-1
 		anchor2 = -1,-1
-		background-color = none
 		saved-params = "pos;size;is-minimized;is-maximized"
 		is-pane = true
 	elem "browseroutput"
@@ -1359,7 +1372,6 @@ window "output_browser"
 		size = 640x480
 		anchor1 = 0,0
 		anchor2 = 100,100
-		background-color = none
 		saved-params = ""
 
 window "popupwindow"
@@ -1381,21 +1393,17 @@ window "prefs_markings_subwindow"
 		size = 400x400
 		anchor1 = -1,-1
 		anchor2 = -1,-1
-		background-color = none
 		is-visible = false
 		saved-params = "pos;size;is-minimized;is-maximized"
 		title = "Marking Selection Editing"
 		statusbar = false
 		can-minimize = false
-		outer-size = 416x439
-		inner-size = 400x400
 	elem "prefs_markings_browser"
 		type = BROWSER
 		pos = 0,0
 		size = 400x400
 		anchor1 = -1,-1
 		anchor2 = -1,-1
-		background-color = none
 		saved-params = ""
 
 window "rpane"
@@ -1413,7 +1421,6 @@ window "rpane"
 		size = 640x445
 		anchor1 = 0,0
 		anchor2 = 100,100
-		background-color = none
 		saved-params = "splitter"
 		left = "statwindow"
 		right = "outputwindow"
@@ -1424,8 +1431,8 @@ window "rpane"
 		size = 60x16
 		anchor1 = -1,-1
 		anchor2 = -1,-1
-		background-color = '#005813'
-		text-color = #FFFFFF
+		text-color = #ffffff
+		background-color = #005813
 		saved-params = "is-checked"
 		text = "Patreon"
 		command = "patreon"
@@ -1436,7 +1443,6 @@ window "rpane"
 		size = 60x16
 		anchor1 = -1,-1
 		anchor2 = -1,-1
-		background-color = none
 		saved-params = "is-checked"
 		text = "Discord"
 		command = "discord"
@@ -1447,7 +1453,6 @@ window "rpane"
 		size = 60x16
 		anchor1 = -1,-1
 		anchor2 = -1,-1
-		background-color = none
 		saved-params = "is-checked"
 		text = "GitHub"
 		command = "github"
@@ -1458,7 +1463,6 @@ window "rpane"
 		size = 60x16
 		anchor1 = -1,-1
 		anchor2 = -1,-1
-		background-color = none
 		saved-params = "is-checked"
 		text = "Map"
 		command = "map"
@@ -1469,7 +1473,6 @@ window "rpane"
 		size = 60x16
 		anchor1 = -1,-1
 		anchor2 = -1,-1
-		background-color = none
 		saved-params = "is-checked"
 		text = "Rules"
 		command = "rules"
@@ -1480,7 +1483,6 @@ window "rpane"
 		size = 60x16
 		anchor1 = -1,-1
 		anchor2 = -1,-1
-		background-color = none
 		saved-params = "is-checked"
 		text = "Forum"
 		command = "forum"
@@ -1491,7 +1493,6 @@ window "rpane"
 		size = 60x16
 		anchor1 = -1,-1
 		anchor2 = -1,-1
-		background-color = none
 		saved-params = "is-checked"
 		text = "Wiki"
 		command = "wiki"
@@ -1502,7 +1503,6 @@ window "rpane"
 		size = 60x16
 		anchor1 = -1,-1
 		anchor2 = -1,-1
-		background-color = none
 		is-visible = false
 		saved-params = "is-checked"
 		text = "Text"
@@ -1516,7 +1516,6 @@ window "rpane"
 		size = 60x16
 		anchor1 = -1,-1
 		anchor2 = -1,-1
-		background-color = none
 		is-visible = false
 		saved-params = "is-checked"
 		text = "Info"
@@ -1529,7 +1528,6 @@ window "rpane"
 		size = 1x1
 		anchor1 = -1,-1
 		anchor2 = -1,-1
-		background-color = none
 		is-visible = false
 		saved-params = ""
 
@@ -1637,3 +1635,4 @@ window "statwindow"
 		anchor2 = 100,100
 		is-visible = false
 		saved-params = ""
+

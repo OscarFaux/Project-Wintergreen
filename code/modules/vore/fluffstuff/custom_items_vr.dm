@@ -230,6 +230,23 @@
 	if(isliving(user))
 		user.visible_message(span_warning("[user] invades [M]'s personal space, thrusting [src] into their face insistently."),span_warning("You invade [M]'s personal space, thrusting [src] into their face insistently."))
 
+//WINTERGREEN edits
+//Luna Faux
+/obj/item/pda/captain/vanillapda
+    name = "Vanilla's PDA"
+    desc = "A mint green and white vintage PDA with a built in music player! has a sticker of a red dragon on the back"
+    icon = 'icons/vore/custom_items_vr.dmi'
+    icon_state = "pda-VAN"
+
+/obj/item/modular_computer/laptop/preset/custom_loadout/hybrid/vanilla
+	name = "Special Laptop"
+	desc = "A large, heavy laptop computer that has tons of knobs and switches, along with a large red, furred dragon sticker on the cover."
+	icon = 'icons/vore/custom_items_vr.dmi'
+	overlay_icon = 'icons/obj/modular_laptop.dmi'
+	icon_state_unpowered = "vanilla-open"
+	icon_state = "vanilla-open"
+	icon_state_closed = "vanilla-closed"
+
 //JoanRisu:Joan Risu
 /obj/item/pda/heads/hos/joanpda
 	icon = 'icons/vore/custom_items_vr.dmi'
