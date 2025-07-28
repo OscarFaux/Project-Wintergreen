@@ -35,6 +35,12 @@
 	ckeywhitelist = list("lunafaux")
 	character_name = list("Luna Fox", "VA-N177-A Fox", "Vanilla Fox", "Kipp S'Jet", "Singer Fox")
 
+/datum/gear/fluff/All_Access_Card
+	path = /obj/item/card/id/gold/captain/spare
+	display_name = "Spare Keycard"
+	ckeywhitelist = list("lunafaux")
+	character_name = list("Luna Fox", "VA-N177-A Fox", "Vanilla Fox", "Kipp S'Jet", "Singer Fox")
+
 /datum/gear/fluff/Rotary_Medkit
 	path = /obj/item/implantcase/medkit
 	display_name = "Rotary Medkit"
