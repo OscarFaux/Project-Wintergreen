@@ -150,6 +150,22 @@
 	from_helmet = /obj/item/gun/energy/laser
 	to_helmet = /obj/item/gun/energy/retro
 //DEBUG ITEM ENDS
+//WINTERGREEN edits
+//Luna Faux
+/obj/item/pda/captain/vanillapda
+    name = "Vanilla's PDA"
+    desc = "A mint green and white vintage PDA with a built in music player! has a sticker of a red dragon on the back"
+    icon = 'icons/vore/custom_items_vr.dmi'
+    icon_state = "pda-VAN"
+
+/obj/item/modular_computer/laptop/preset/custom_loadout/hybrid/vanilla
+	name = "Special Laptop"
+	desc = "A large, heavy laptop computer that has tons of knobs and switches, along with a large red, furred dragon sticker on the cover."
+	icon = 'icons/vore/custom_items_vr.dmi'
+	overlay_icon = 'icons/obj/modular_laptop.dmi'
+	icon_state_unpowered = "vanilla-open"
+	icon_state = "vanilla-open"
+	icon_state_closed = "vanilla-closed"
 
 //JoanRisu:Joan Risu
 /obj/item/flame/lighter/zippo/fluff/joan
@@ -229,24 +245,6 @@
 /obj/item/card/id/centcom/station/fluff/joanbadge/attack(mob/living/carbon/human/M, mob/living/user)
 	if(isliving(user))
 		user.visible_message(span_warning("[user] invades [M]'s personal space, thrusting [src] into their face insistently."),span_warning("You invade [M]'s personal space, thrusting [src] into their face insistently."))
-
-//WINTERGREEN edits
-//Luna Faux
-/obj/item/pda/captain/fluff/vanillapda
-    name = "Vanilla's PDA"
-    desc = "A mint green and white vintage PDA with a built in music player! has a sticker of a red dragon on the back"
-    icon = 'icons/vore/custom_items_vr.dmi'
-    icon_state = "pda-VAN"
-    default_cartridge = /obj/item/cartridge/captain
-
-/obj/item/modular_computer/laptop/preset/custom_loadout/hybrid/vanilla
-	name = "Special Laptop"
-	desc = "A large, heavy laptop computer that has tons of knobs and switches, along with a large red, furred dragon sticker on the cover."
-	icon = 'icons/vore/custom_items_vr.dmi'
-	overlay_icon = 'icons/obj/modular_laptop.dmi'
-	icon_state_unpowered = "vanilla-open"
-	icon_state = "vanilla-open"
-	icon_state_closed = "vanilla-closed"
 
 //JoanRisu:Joan Risu
 /obj/item/pda/heads/hos/joanpda
@@ -573,13 +571,17 @@
 	if((state == 1) && owner && (owner.stat == DEAD))
 		update_state(2)
 		visible_message(span_warning("The [name] begins flashing red."))
-		sleep(30)
-		visible_message(span_warning("The [name] shatters into dust!"))
-		if(owner_c)
-			to_chat(owner_c, span_notice("The HAVENS system is notified of your demise via \the [name]."))
-		update_state(3)
-		name = "broken [initial(name)]"
-		desc = "This seems like a necklace, but the actual pendant is missing."
+		addtimer(CALLBACK(src, PROC_REF(shatter_into_dust)), 3 SECONDS, TIMER_DELETE_ME)
+
+/obj/item/clothing/accessory/collar/khcrystal/proc/shatter_into_dust()
+	SHOULD_NOT_OVERRIDE(TRUE)
+	PRIVATE_PROC(TRUE)
+	visible_message(span_warning("The [name] shatters into dust!"))
+	if(owner_c)
+		to_chat(owner_c, span_notice("The HAVENS system is notified of your demise via \the [name]."))
+	update_state(3)
+	name = "broken [initial(name)]"
+	desc = "This seems like a necklace, but the actual pendant is missing."
 
 /obj/item/clothing/accessory/collar/khcrystal/proc/update_state(var/tostate)
 	state = tostate

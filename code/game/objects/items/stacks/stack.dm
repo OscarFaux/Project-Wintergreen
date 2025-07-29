@@ -45,6 +45,7 @@
 				starting_amount = 1
 		set_amount(starting_amount, TRUE)
 	update_icon()
+	AddElement(/datum/element/sellable/material_stack)
 
 /obj/item/stack/Destroy()
 	if(uses_charge)
@@ -54,6 +55,11 @@
 	if(islist(synths))
 		synths.Cut()
 	return ..()
+
+/obj/item/stack/get_material_composition(breakdown_flags)
+	. = ..()
+	for(var/M in .)
+		.[M] *= amount
 
 /obj/item/stack/update_icon()
 	if(no_variants)

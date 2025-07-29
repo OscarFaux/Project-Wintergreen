@@ -4559,36 +4559,6 @@
 		"jukebox": true
 	},
 	{
-		"url": "http://98.200.50.80:27017/uploads/872974434946908161/Say_so_JP.mp3",
-		"title": "Say So (JP)",
-		"duration": 3200,
-		"artist": "Raimych",
-		"genre": "Pop",
-		"secret": false,
-		"lobby": true,
-		"jukebox": true
-	},
-	{
-		"url": "http://98.200.50.80:27017/uploads/872974434946908161/Say_so_slowed.mp3",
-		"title": "Say So",
-		"duration": 3180,
-		"artist": "Cat",
-		"genre": "Pop",
-		"secret": false,
-		"lobby": true,
-		"jukebox": true
-	},
-	{
-		"url": "http://98.200.50.80:27017/uploads/872974434946908161/Desertsandsfull.m4a",
-		"title": "The disciples of the New World.",
-		"duration": 46520,
-		"artist": "Desert Sands feel warm at night",
-		"genre": "Ambience",
-		"secret": false,
-		"lobby": true,
-		"jukebox": true
-	},
-	{
 		"url": "https://files.catbox.moe/6m88w6.mp3",
 		"title": "King Sucklet",
 		"duration": 1370,

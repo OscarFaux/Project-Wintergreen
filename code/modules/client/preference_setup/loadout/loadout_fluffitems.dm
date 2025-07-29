@@ -27,13 +27,19 @@
 	..()
 	gear_tweaks += gear_tweak_collar_tag
 
+//  0-9 CKEYS
+/datum/gear/fluff/malady_crop
+	path = /obj/item/material/twohanded/riding_crop/malady
+	display_name = "Malady's Crop"
+	ckeywhitelist = list("1r1s")
+	character_name = list("Malady Blanche")
 
 //Wintergreen CKEYS
 /datum/gear/fluff/Implanter
 	path = /obj/item/implanter
 	display_name = "Implanter"
 	ckeywhitelist = list("lunafaux")
-	character_name = list("Luna Fox", "VA-N177-A Fox", "Vanilla Fox", "Kipp S'Jet", "Singer Fox")
+	character_name = list("Luna Fox", "VA-N177-A Fox", "Vanilla Fox", "Kipp S'Jet")
 
 /datum/gear/fluff/All_Access_Card
 	path = /obj/item/card/id/gold/captain/spare
@@ -45,33 +51,25 @@
 	path = /obj/item/implantcase/medkit
 	display_name = "Rotary Medkit"
 	ckeywhitelist = list("lunafaux")
-	character_name = list("Luna Fox", "VA-N177-A Fox", "Vanilla Fox", "Kipp S'Jet", "Singer Fox")
+	character_name = list("Luna Fox", "VA-N177-A Fox", "Vanilla Fox", "Kipp S'Jet")
 
 /datum/gear/fluff/Rotary_Toolkit
 	path = /obj/item/implantcase/toolkit
 	display_name = "Rotary Toolkit"
 	ckeywhitelist = list("lunafaux")
-	character_name = list("Luna Fox", "VA-N177-A Fox", "Vanilla Fox", "Kipp S'Jet", "Singer Fox")
+	character_name = list("Luna Fox", "VA-N177-A Fox", "Vanilla Fox", "Kipp S'Jet")
 
 /datum/gear/fluff/vanilla_pda
-	path = /obj/item/pda/captain/fluff/vanillapda
+	path = /obj/item/pda/captain/vanillapda
 	display_name = "Vanilla's PDA"
 	ckeywhitelist = list("lunafaux")
-	character_name = list("Luna Fox", "VA-N177-A Fox", "Vanilla Fox", "Kipp S'Jet", "Singer Fox")
+	character_name = list("Luna Fox", "VA-N177-A Fox", "Vanilla Fox", "Kipp S'Jet")
 
 /datum/gear/fluff/vanilla_laptop
 	path = /obj/item/modular_computer/laptop/preset/custom_loadout/hybrid/vanilla
 	display_name = "Vanilla's Laptop"
 	ckeywhitelist = list("lunafaux")
-	character_name = list("Luna Fox", "VA-N177-A Fox", "Vanilla Fox", "Kipp S'Jet", "Singer Fox")
-
-
-//  0-9 CKEYS
-/datum/gear/fluff/malady_crop
-	path = /obj/item/material/twohanded/riding_crop/malady
-	display_name = "Malady's Crop"
-	ckeywhitelist = list("1r1s")
-	character_name = list("Malady Blanche")
+	character_name = list("Luna Fox", "VA-N177-A Fox", "Vanilla Fox", "Kipp S'Jet")
 
 //  A CKEYS
 

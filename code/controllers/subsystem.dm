@@ -296,7 +296,3 @@
 		if (NAMEOF(src, queued_priority)) //editing this breaks things.
 			return FALSE
 	. = ..()
-
-#define INIT_ORDER_LATE 999
-#define SS_NO_FIRE_FIRST_TICK 1
-
