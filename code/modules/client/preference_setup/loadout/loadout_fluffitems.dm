@@ -39,7 +39,7 @@
 	path = /obj/item/implanter
 	display_name = "Implanter"
 	ckeywhitelist = list("lunafaux")
-	character_name = list("Luna Fox", "VA-N177-A Fox", "Vanilla Fox", "Kipp S'Jet")
+	character_name = list("Luna Fox", "VA-N177-A Fox", "Vanilla Fox", "Kipp S'Jet", "Singer Fox")
 
 /datum/gear/fluff/All_Access_Card
 	path = /obj/item/card/id/gold/captain/spare
@@ -51,25 +51,25 @@
 	path = /obj/item/implantcase/medkit
 	display_name = "Rotary Medkit"
 	ckeywhitelist = list("lunafaux")
-	character_name = list("Luna Fox", "VA-N177-A Fox", "Vanilla Fox", "Kipp S'Jet")
+	character_name = list("Luna Fox", "VA-N177-A Fox", "Vanilla Fox", "Kipp S'Jet", "Singer Fox")
 
 /datum/gear/fluff/Rotary_Toolkit
 	path = /obj/item/implantcase/toolkit
 	display_name = "Rotary Toolkit"
 	ckeywhitelist = list("lunafaux")
-	character_name = list("Luna Fox", "VA-N177-A Fox", "Vanilla Fox", "Kipp S'Jet")
+	character_name = list("Luna Fox", "VA-N177-A Fox", "Vanilla Fox", "Kipp S'Jet", "Singer Fox")
 
 /datum/gear/fluff/vanilla_pda
 	path = /obj/item/pda/captain/vanillapda
 	display_name = "Vanilla's PDA"
 	ckeywhitelist = list("lunafaux")
-	character_name = list("Luna Fox", "VA-N177-A Fox", "Vanilla Fox", "Kipp S'Jet")
+	character_name = list("Luna Fox", "VA-N177-A Fox", "Vanilla Fox", "Kipp S'Jet", "Singer Fox")
 
 /datum/gear/fluff/vanilla_laptop
 	path = /obj/item/modular_computer/laptop/preset/custom_loadout/hybrid/vanilla
 	display_name = "Vanilla's Laptop"
 	ckeywhitelist = list("lunafaux")
-	character_name = list("Luna Fox", "VA-N177-A Fox", "Vanilla Fox", "Kipp S'Jet")
+	character_name = list("Luna Fox", "VA-N177-A Fox", "Vanilla Fox", "Kipp S'Jet", "Singer Fox")
 
 //  A CKEYS
 
