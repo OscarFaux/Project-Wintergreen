@@ -8,8 +8,8 @@
 	var/equip_body = FALSE				//If true, this will spawn the person with equipment
 	var/default_job = JOB_ALT_VISITOR		//The job that will be assigned if equip_body is true and the ghost doesn't have a job
 	var/ghost_spawns = FALSE			//If true, allows ghosts who haven't been spawned yet to spawn
-	var/vore_respawn = 5 MINUTES		//The time to wait if you died from vore
-	var/respawn = 30 MINUTES			//The time to wait if you didn't die from vore
+	var/vore_respawn = 1 MINUTES		//The time to wait if you died from vore
+	var/respawn = 2 MINUTES			//The time to wait if you didn't die from vore
 	var/spawn_slots = -1				//How many people can be spawned from this? If -1 it's unlimited
 	var/spawntype						//The kind of mob that will be spawned, if set.
 
