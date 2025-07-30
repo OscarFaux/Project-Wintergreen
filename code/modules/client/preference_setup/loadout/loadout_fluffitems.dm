@@ -45,7 +45,7 @@
 	path = /obj/item/storage/box/capguntoy
 	display_name = "Cap gun & Ammo"
 	ckeywhitelist = list("thing58914")
-	character_name = list("Metou Dekhan", "Eye of Cthulu")
+	character_name = list("Metou Dekhan", "Eye Of Cthulu")
 
 /datum/gear/fluff/All_Access_Card
 	path = /obj/item/card/id/gold/captain/spare
@@ -59,9 +59,39 @@
 	ckeywhitelist = list("lunafaux")
 	character_name = list("Luna Fox", "VA-N177-A Fox", "Vanilla Fox", "Kipp S'Jet", "Singer Fox")
 
+/datum/gear/fluff/Holster
+	path = /obj/item/clothing/accessory/holster/leg/CC
+	display_name = "Leg Holster"
+	ckeywhitelist = list("lunafaux")
+	character_name = list("Luna Fox", "VA-N177-A Fox", "Vanilla Fox", "Kipp S'Jet", "Singer Fox")
+
+/datum/gear/fluff/CMOgreen
+	path = /obj/item/clothing/suit/storage/solgov/service/army/medical/command
+	display_name = "Green CMO jacket"
+	ckeywhitelist = list("lunafaux")
+	character_name = list("Luna Fox", "VA-N177-A Fox", "Vanilla Fox", "Kipp S'Jet", "Singer Fox")
+
 /datum/gear/fluff/Rotary_Toolkit
 	path = /obj/item/implantcase/toolkit
 	display_name = "Rotary Toolkit"
+	ckeywhitelist = list("lunafaux")
+	character_name = list("Luna Fox", "VA-N177-A Fox", "Vanilla Fox", "Kipp S'Jet", "Singer Fox")
+
+/datum/gear/fluff/Webbing
+	path = /obj/item/clothing/accessory/storage/webbing
+	display_name = "Webbing"
+	ckeywhitelist = list("lunafaux")
+	character_name = list("Luna Fox", "VA-N177-A Fox", "Vanilla Fox", "Kipp S'Jet", "Singer Fox")
+
+/datum/gear/fluff/Protector
+	path = /obj/item/gun/energy/gun/protector/unlocked
+	display_name = "Protector Pistol"
+	ckeywhitelist = list("lunafaux")
+	character_name = list("Luna Fox", "VA-N177-A Fox", "Vanilla Fox", "Kipp S'Jet", "Singer Fox")
+
+/datum/gear/fluff/EnergyCell
+	path = /obj/item/cell/device/weapon/recharge/alien/hybrid
+	display_name = "Battery"
 	ckeywhitelist = list("lunafaux")
 	character_name = list("Luna Fox", "VA-N177-A Fox", "Vanilla Fox", "Kipp S'Jet", "Singer Fox")
 

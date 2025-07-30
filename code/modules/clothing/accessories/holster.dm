@@ -169,3 +169,9 @@
 /obj/item/clothing/accessory/holster/leg/black
 	desc = "A tacticool handgun holster. Worn on the upper leg."
 	icon_state = "holster_b_leg"
+
+/obj/item/clothing/accessory/holster/leg/CC
+	desc = "A drop leg holster made of a durable synthetic leather."
+	icon_state = "holster_leg"
+	overlay_state = "holster_leg"
+	concealed_holster = 1
