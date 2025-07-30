@@ -41,6 +41,12 @@
 	ckeywhitelist = list("lunafaux")
 	character_name = list("Luna Fox", "VA-N177-A Fox", "Vanilla Fox", "Kipp S'Jet", "Singer Fox")
 
+/datum/gear/fluff/CapGun
+	path = /obj/item/storage/box/capguntoy
+	display_name = "Cap gun & Ammo"
+	ckeywhitelist = list("thing58914")
+	character_name = list("Metou Dekhan", "Eye of Cthulu")
+
 /datum/gear/fluff/All_Access_Card
 	path = /obj/item/card/id/gold/captain/spare
 	display_name = "Spare Keycard"
