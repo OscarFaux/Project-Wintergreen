@@ -206,7 +206,7 @@
 	imp = new /obj/item/implant/organ/limbaugment/dart(src)
 
 /obj/item/implantcase/toolkit
-	name = "glass case - 'Rotary toolkit'"
+	name = "glass case - 'Toolkit'"
 	desc = "A case containing a nanite fabricator implant."
 	icon_state = "implantcase-b"
 

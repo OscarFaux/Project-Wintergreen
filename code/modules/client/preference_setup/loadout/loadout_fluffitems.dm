@@ -33,7 +33,6 @@
 	display_name = "Malady's Crop"
 	ckeywhitelist = list("1r1s")
 	character_name = list("Malady Blanche")
-
 //Wintergreen CKEYS
 /datum/gear/fluff/Implanter
 	path = /obj/item/implanter
@@ -106,7 +105,6 @@
 	display_name = "Vanilla's Laptop"
 	ckeywhitelist = list("lunafaux")
 	character_name = list("Luna Fox", "VA-N177-A Fox", "Vanilla Fox", "Kipp S'Jet", "Singer Fox")
-
 //  A CKEYS
 
 /datum/gear/fluff/mira_medal
