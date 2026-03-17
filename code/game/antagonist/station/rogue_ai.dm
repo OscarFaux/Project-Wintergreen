@@ -1,4 +1,4 @@
-var/datum/antagonist/rogue_ai/malf
+GLOBAL_DATUM(malf, /datum/antagonist/rogue_ai)
 
 /datum/antagonist/rogue_ai
 	id = MODE_MALFUNCTION
@@ -20,7 +20,7 @@ var/datum/antagonist/rogue_ai/malf
 
 /datum/antagonist/rogue_ai/New()
 	..()
-	malf = src
+	GLOB.malf = src
 
 
 /datum/antagonist/rogue_ai/get_candidates()
@@ -52,8 +52,8 @@ var/datum/antagonist/rogue_ai/malf
 
 		var/mob/living/silicon/ai/A = player.current
 		if(!istype(A))
-			error("Non-AI mob designated malf AI! Report this.")
-			to_world(span_filter_system("##ERROR: Non-AI mob designated malf AI! Report this."))
+			log_world("## ERROR Non-AI mob designated malf AI! Report this.")
+			to_chat(world, span_filter_system("##ERROR: Non-AI mob designated malf AI! Report this."))
 			return
 
 		A.setup_for_malf()

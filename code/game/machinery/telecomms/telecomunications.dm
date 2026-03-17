@@ -118,7 +118,7 @@
 
 
 /obj/machinery/telecomms/Initialize(mapload)
-	telecomms_list += src
+	GLOB.telecomms_list += src
 	..()
 	default_apply_parts()
 	return INITIALIZE_HINT_LATELOAD
@@ -137,12 +137,12 @@
 			for(var/obj/machinery/telecomms/T in orange(20, src))
 				add_link(T)
 		else
-			for(var/obj/machinery/telecomms/T in telecomms_list)
+			for(var/obj/machinery/telecomms/T in GLOB.telecomms_list)
 				add_link(T)
 
 /obj/machinery/telecomms/Destroy()
-	telecomms_list -= src
-	for(var/obj/machinery/telecomms/comm in telecomms_list)
+	GLOB.telecomms_list -= src
+	for(var/obj/machinery/telecomms/comm in GLOB.telecomms_list)
 		comm.links -= src
 	links = list()
 	. = ..()
@@ -185,7 +185,7 @@
 	if(traffic > 0)
 		traffic -= netspeed
 
-/obj/machinery/telecomms/emp_act(severity)
+/obj/machinery/telecomms/emp_act(severity, recursive)
 	if(prob(100/severity))
 		if(!(stat & EMPED))
 			stat |= EMPED
@@ -388,8 +388,8 @@
 	var/broadcasting = 1
 	var/receiving = 1
 
-/obj/machinery/telecomms/relay/forceMove(var/newloc)
-	. = ..(newloc)
+/obj/machinery/telecomms/relay/forceMove(atom/destination, direction, movetime)
+	. = ..(destination, direction, movetime)
 	listening_level = z
 
 /obj/machinery/telecomms/relay/receive_information(datum/signal/signal, obj/machinery/telecomms/machine_from)
@@ -439,7 +439,7 @@
 	machinetype = 2
 	circuit = /obj/item/circuitboard/telecomms/bus
 	netspeed = 40
-	var/change_frequency = 0
+	var/change_frequency = ZERO_FREQ
 
 /obj/machinery/telecomms/bus/receive_information(datum/signal/signal, obj/machinery/telecomms/machine_from)
 
@@ -676,7 +676,7 @@
 //Generic telecomm connectivity test proc
 /proc/can_telecomm(var/atom/A, var/atom/B, var/ad_hoc = FALSE)
 	if(!A || !B)
-		log_debug("can_telecomm(): Undefined endpoints!")
+		log_mapping("can_telecomm(): Undefined endpoints!")
 		return FALSE
 
 	//Can't in this case, obviously!

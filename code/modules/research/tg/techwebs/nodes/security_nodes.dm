@@ -57,6 +57,8 @@
 	prereq_ids = list(TECHWEB_NODE_SEC_EQUIP)
 	design_ids = list(
 		"netgun",
+		"sizenetgun",
+		"bolablaster",
 		"sickshot",
 		"pummeler",
 		"protector",
@@ -166,4 +168,5 @@
 		"nsfw_cell_xray",
 		"nsfw_cell_stripper",
 	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_4_POINTS)
+	announce_channels = list(CHANNEL_SECURITY)

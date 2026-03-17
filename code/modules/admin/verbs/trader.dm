@@ -46,10 +46,10 @@ GLOBAL_VAR_INIT(can_call_traders, 1)
 		if(!GLOB.send_beruang)
 			to_chat(usr, "The Beruang is not currently heading to the station.")
 			return
-		if(traders.current_antagonists.len >= traders.hard_cap)
+		if(GLOB.traders.current_antagonists.len >= GLOB.traders.hard_cap)
 			to_chat(usr, "The number of trader slots is already full!")
 			return
-		traders.create_default(usr)
+		GLOB.traders.create_default(usr)
 	else
 		to_chat(usr, "You need to be an observer or new player to use this.")
 
@@ -59,7 +59,7 @@ GLOBAL_VAR_INIT(can_call_traders, 1)
 	if(GLOB.send_beruang)
 		return
 
-	command_announcement.Announce("Incoming cargo hauler: Beruang (Reg: VRS 22EB1F11C2).", "[station_name()] Traffic Control")
+	GLOB.command_announcement.Announce("Incoming cargo hauler: Beruang (Reg: VRS 22EB1F11C2).", "[station_name()] Traffic Control")
 
 	GLOB.can_call_traders = 0 // Only one call per round.
 	GLOB.send_beruang = 1
@@ -75,7 +75,7 @@ GLOBAL_VAR(trader_loaded)
 		GLOB.trader_loaded = TRUE
 		var/datum/map_template/MT = SSmapping.map_templates["Special Area - Salamander Trader"] //was: "Special Area - Trader"
 		if(!istype(MT))
-			error("Trader is not a valid map template!")
+			log_mapping("Trader is not a valid map template!")
 		else
 			MT.load_new_z(centered = TRUE)
 			log_and_message_admins("Loaded the trade shuttle just now.")

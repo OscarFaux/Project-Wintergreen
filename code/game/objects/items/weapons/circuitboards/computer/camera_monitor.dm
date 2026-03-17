@@ -5,7 +5,7 @@
 /obj/item/circuitboard/security
 	name = T_BOARD("security camera monitor")
 	build_path = /obj/machinery/computer/security
-	req_access = list(access_security)
+	req_access = list(ACCESS_SECURITY)
 	var/list/network
 	var/locked = 1
 	var/emagged = 0
@@ -30,7 +30,7 @@
 /obj/item/circuitboard/security/mining
 	name = T_BOARD("mining camera monitor")
 	build_path = /obj/machinery/computer/security/mining
-	network = list("Mining Outpost")
+	network = list(NETWORK_MINE)
 	req_access = list()
 
 /obj/item/circuitboard/security/telescreen/entertainment
@@ -80,7 +80,7 @@
 			to_chat(user, "No input found please hang up and try your call again.")
 			return
 		var/list/tempnetwork = splittext(input, ",")
-		tempnetwork = difflist(tempnetwork,restricted_camera_networks,1)
+		tempnetwork = difflist(tempnetwork, GLOB.restricted_camera_networks, 1)
 		if(tempnetwork.len < 1)
 			to_chat(user, "No network found please hang up and try your call again.")
 			return

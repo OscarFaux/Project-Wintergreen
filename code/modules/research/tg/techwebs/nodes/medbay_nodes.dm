@@ -8,27 +8,29 @@
 		"scan_console",
 		// "medicalbed",
 		// "defibmountdefault",
-		// "defibrillator",
+		"defibrillator",
 		// "surgical_drapes",
-		// "scalpel",
-		// "retractor",
-		// "hemostat",
-		// "cautery",
-		// "circular_saw",
-		// "surgicaldrill",
-		// "bonesetter",
+		"scalpel",
+		"retractor",
+		"hemostat",
+		"cautery",
+		"circular_saw",
+		"surgicaldrill",
+		"bonesetter",
+		"implanter",
 		// "blood_filter",
 		// "surgical_tape",
-		// "penlight",
+		"penlight",
 		// "penlight_paramedic",
 		// "stethoscope",
-		// "beaker",
-		// "large_beaker",
+		"vial",
+		"beaker",
+		"large_beaker",
 		// "chem_pack",
 		// "blood_pack",
-		// "syringe",
-		// "dropper",
-		// "pillbottle",
+		"syringe",
+		"dropper",
+		"pillbottle",
 		// "xlarge_beaker",
 		// "organ_jar",
 		// "jerrycan",
@@ -64,6 +66,18 @@
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS)
 	announce_channels = list(CHANNEL_MEDICAL)
+
+/datum/techweb_node/chemical_isolation
+	id = TECHWEB_NODE_CHEM_ISOLATION
+	display_name = "Chemical Identification"
+	description = "Scanning and identifying chemicals and their uses."
+	prereq_ids = list(TECHWEB_NODE_CHEM_SYNTHESIS)
+	design_ids = list(
+		"chem_analyzer",
+		"smart_centrifuge",
+	)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_2_POINTS)
+	announce_channels = list(CHANNEL_ENGINEERING,CHANNEL_MEDICAL)
 
 /datum/techweb_node/medbay_equip_adv
 	id = TECHWEB_NODE_MEDBAY_EQUIP_ADV
@@ -160,6 +174,18 @@
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS)
 	announce_channels = list(CHANNEL_MEDICAL)
+
+/datum/techweb_node/medigun_constant
+	id = TECHWEB_NODE_MEDIGUN_CONSTANT
+	display_name = "Medigun Backpack"
+	description = "A revised version of the ML3M series. This one features a cell-powered constant beam, and ability to charge it with chemicals."
+	prereq_ids = list(TECHWEB_NODE_MEDIGUN)
+	design_ids = list(
+		"medigun_constant"
+	)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS)
+	announce_channels = list(CHANNEL_MEDICAL)
+	discount_experiments = list(/datum/experiment/scanning/people/hurt_medigun = TECHWEB_TIER_3_POINTS)
 
 /datum/techweb_node/nif
 	id = TECHWEB_NODE_NIF

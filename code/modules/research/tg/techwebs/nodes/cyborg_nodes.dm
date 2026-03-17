@@ -110,6 +110,7 @@
 		"borg_hound_capability_module",
 		"borg_hound_capacity_module",
 		"borg_ddrill_module",
+		"borg_adv_mailbag",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_2_POINTS)
 	announce_channels = list(CHANNEL_SCIENCE)
@@ -169,6 +170,7 @@
 	prereq_ids = list(TECHWEB_NODE_AUGMENTATION)
 	design_ids = list(
 		"implant_backup",
+		"health_scan_implant",
 		// "skill_station",
 		// "implant_trombone",
 		// "implant_chem",

@@ -217,7 +217,7 @@
 /obj/item/fbp_backup_cell
 	name = "backup battery"
 	desc = "A small one-time-use chemical battery for synthetic crew when they are low on power in emergency situations."
-	icon = 'icons/obj/power_cells.dmi'
+	icon = 'icons/obj/power_cells_old.dmi'
 	icon_state = "backup"
 	w_class = ITEMSIZE_SMALL
 	var/amount = 150
@@ -268,7 +268,10 @@
 	var/swaps_to = /obj/item/cell/device/weapon/recharge/alien
 	robot_durability = 100
 
-/obj/item/cell/void/attack_self(var/mob/user)
+/obj/item/cell/void/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	user.remove_from_mob(src)
 	to_chat(user, span_notice("You swap [src] to 'device cell' mode."))
 	var/obj/item/cell/newcell = new swaps_to(null)

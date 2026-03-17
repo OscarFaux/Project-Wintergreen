@@ -160,7 +160,7 @@
 		pacified = FALSE //We are not obedient enough to be considered pacified.
 
 	if(!client) //Only update if we don't have a client.
-		if(faction != initial(faction)) //We have had a loyalty potion used on us.
+		if(faction != FACTION_SLIME) //We have had a loyalty potion used on us.
 			update_allowed_vore_types(TRUE)
 		else if(old_mood == "angry") //We were recently angry, so we're still upset and won't let you eat us no matter what! (Unless we had a docility potion put on us, making us harmless)
 			update_allowed_vore_types(FALSE, harmless)
@@ -320,7 +320,7 @@
 
 	return results
 
-/mob/living/simple_mob/slime/xenobio/get_description_info()
+/mob/living/simple_mob/slime/xenobio/get_description_info(list/additional_information)
 	var/list/lines = list()
 	var/intro_line = "Slimes are generally the test subjects of Xenobiology, with different colors having different properties.  \
 	They can be extremely dangerous if not handled properly."

@@ -202,6 +202,7 @@
 /datum/robot_sprite/dogborg/service/drake
 	name = "Drake"
 	sprite_icon_state = "drake"
+	has_vore_belly_resting_sprites = TRUE
 
 /datum/robot_sprite/dogborg/service/booze
 	name = "Boozehound"
@@ -351,6 +352,8 @@
 	has_eye_light_sprites = TRUE
 	has_rest_sprites = TRUE
 	has_vore_belly_sprites = TRUE
+	has_vore_belly_resting_sprites = TRUE
+	belly_capacity_list = list("sleeper" = 3)
 	rest_sprite_options = list("Default", "Sit")
 	icon_x = 64
 	pixel_x = -16

@@ -212,8 +212,10 @@
 
 	return ..()
 
-/obj/item/poi/broken_drone_circuit/attack_self(mob/living/user as mob)
-
+/obj/item/poi/broken_drone_circuit/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 
 	user.visible_message(message = "[user] is studiously examining [src]", self_message = "You take your time to analyze the circuit...")
 	var/message = ""
@@ -240,9 +242,5 @@
 		message += "Looks like there's a printer without any paper in it."
 
 
-	if(do_after(user, delay = 5 SECONDS))
+	if(do_after(user, delay = 5 SECONDS, target = src))
 		to_chat(user, message)
-
-
-
-	..()

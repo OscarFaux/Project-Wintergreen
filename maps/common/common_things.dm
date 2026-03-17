@@ -70,7 +70,7 @@
 		playsound(src, 'sound/effects/supermatter.ogg', 75, 1)
 	if(ismob(A) && prob(5))//lucky day
 		var/destturf = locate(rand(5,world.maxx-5),rand(5,world.maxy-5),pick(using_map.station_levels))
-		new /datum/teleport/instant(A, destturf, 0, 1, null, null, null, 'sound/effects/phasein.ogg')
+		do_teleport(A, destturf, 0, 1, asoundin = 'sound/effects/phasein.ogg')
 	else
 		return ..()
 
@@ -91,21 +91,29 @@
 
 	var/area/shock_area = /area/tether/surfacebase/tram
 
+//For the tram.
+/turf/simulated/floor/maglev/moving
+	icon = 'icons/turf/transit_vr.dmi'
+
 /turf/simulated/floor/maglev/Initialize(mapload)
 	. = ..()
 	shock_area = locate(shock_area)
 
 // Walking on maglev tracks will shock you! Horray!
 /turf/simulated/floor/maglev/Entered(var/atom/movable/AM, var/atom/old_loc)
-	if(isliving(AM) && !(AM.is_incorporeal()) && prob(50))
-		track_zap(AM)
+	if(!isliving(AM) || prob(50))
+		return
+	if(locate(/obj/structure/catwalk) in src) // safe to walk over as a bridge!
+		return
+	track_zap(AM)
 
 /turf/simulated/floor/maglev/attack_hand(var/mob/user)
 	if(prob(75))
 		track_zap(user)
 
 /turf/simulated/floor/maglev/proc/track_zap(var/mob/living/user)
-	if (!istype(user)) return
+	if(!istype(user) || user.is_incorporeal())
+		return
 	if (electrocute_mob(user, shock_area, src))
 		var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
 		s.set_up(5, 1, src)
@@ -138,7 +146,7 @@
 	spawnpoint_type = /datum/spawnpoint/tram
 
 /obj/machinery/cryopod/robot/door/tram/process()
-	if(emergency_shuttle.online() || emergency_shuttle.returned())
+	if(GLOB.emergency_shuttle.online() || GLOB.emergency_shuttle.returned())
 		// Transform into a door!  But first despawn anyone inside
 		time_till_despawn = 0
 		..()
@@ -245,10 +253,6 @@
 /obj/item/paper/sdshield
 	name = "ABOUT THE SHIELD GENERATOR"
 	info = "<H1>ABOUT THE SHIELD GENERATOR</H1><BR><BR>If you&#39;re up here you are more than likely worried about hitting rocks or some other such thing. It is good to worry about such things as that is an inevitability.<BR><BR>The Stellar Delight is a rather compact vessel, so a setting of 55 to the range will just barely cover her aft. <BR><BR>It is recommended that you turn off all of the different protection types except multi dimensional warp and whatever it is you&#39;re worried about running into. (probably meteors (hyperkinetic)). <BR><BR>With only those two and all the other default settings, the shield uses more than 6 MW to run, which is more than the ship can ordinarily produce. AS SUCH, it is also recommended that you reduce the input cap to whatever you find reasonable (being as it defaults to 1 MW, which is the entirety of the stock power supply) and activate and configure the shield BEFORE you need it. <BR><BR>The shield takes some time to expand its range to the desired specifications, and on top of that, under the default low power setting, takes around 40 seconds to spool up. Once it is active, the fully charged internal capacitors will last for a few minutes before depleting fully. You can increase the passive energy use to decrease the spool up time, but it also uses the stored energy much faster, so, that is not recommended except in dire emergencies.<BR><BR>So, this shield is not intended to be run indefinitely, unless you seriously beef up the ship&#39;s engine and power supply.<BR><BR>Fortunately, if you&#39;ve got a good pilot, you shouldn&#39;t really need the shield generator except in rare cases and only for short distances. Still, it is a good idea to configure the shield to be ready before you need it.<BR><BR>Good luck out there - <I>Budly Gregington</I>"
-
-/obj/item/paper/centcomitems
-	name = "Note from Central Command"
-	info = "Hello!<BR> If you're reading this then that means that due to either lack of crew or crew competence,<BR> Central Command has decided to supply you with these additional supplies!"
 
 /obj/item/book/manual/sd_guide
 	name = "Stellar Delight User's Guide"

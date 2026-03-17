@@ -28,7 +28,7 @@
 
 /obj/item/stack/rods/Initialize(mapload)
 	. = ..()
-	recipes = rods_recipes
+	recipes = GLOB.rods_recipes
 	update_icon()
 
 /obj/item/stack/rods/update_icon()
@@ -96,7 +96,7 @@
 			return
 		to_chat(user, span_notice("Assembling grille..."))
 		in_use = 1
-		if (!do_after(user, 10))
+		if (!do_after(user, 1 SECOND, target = src))
 			in_use = 0
 			return
 		var/obj/structure/grille/F = new /obj/structure/grille/ ( user.loc )

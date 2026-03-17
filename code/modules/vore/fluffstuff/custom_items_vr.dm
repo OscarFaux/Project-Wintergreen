@@ -158,6 +158,12 @@
     icon = 'icons/vore/custom_items_vr.dmi'
     icon_state = "pda-VAN"
 
+/obj/item/clothing/accessory/holster/leg/CC
+	desc = "A drop leg holster made of a durable synthetic leather."
+	icon_state = "holster_leg"
+	overlay_state = "holster_leg"
+	concealed_holster = 1
+
 /obj/item/modular_computer/laptop/preset/custom_loadout/hybrid/vanilla
 	name = "Special Laptop"
 	desc = "A large, heavy laptop computer that has tons of knobs and switches, along with a large red, furred dragon sticker on the cover."
@@ -166,6 +172,7 @@
 	icon_state_unpowered = "vanilla-open"
 	icon_state = "vanilla-open"
 	icon_state_closed = "vanilla-closed"
+
 
 //JoanRisu:Joan Risu
 /obj/item/flame/lighter/zippo/fluff/joan
@@ -236,9 +243,13 @@
 	icon_state = "joanbadge"
 	registered_name = "Joan Risu"
 	assignment = "Centcom Officer"
+	special_handling = TRUE
 
 
-/obj/item/card/id/centcom/station/fluff/joanbadge/attack_self(mob/user as mob)
+/obj/item/card/id/centcom/station/fluff/joanbadge/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(isliving(user))
 		user.visible_message(span_warning("[user] flashes their golden security badge.\nIt reads:NT Security."),span_warning("You display the faded badge.\nIt reads: NT Security."))
 
@@ -306,7 +317,10 @@
 	icon_override = 'icons/vore/custom_items_vr.dmi'
 	item_state = "Flag_Nanotrasen_mob"
 
-/obj/item/flag/attack_self(mob/user as mob)
+/obj/item/flag/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(isliving(user))
 		user.visible_message(span_warning("[user] waves their Banner around!"),span_warning("You wave your Banner around."))
 
@@ -364,7 +378,7 @@
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "nehiphones"
 
-	icon_override = 'icons/vore/custom_onmob_vr.dmi'
+	default_worn_icon = 'icons/vore/custom_clothes_mob.dmi'
 	item_state = "nehiphones"
 
 //zodiacshadow: Nehi Maximus
@@ -427,16 +441,19 @@
 /obj/item/card/id/centcom/station/fluff/aronai
 	registered_name = "CONFIGURE ME"
 	assignment = "CC Medical"
-	var/configured = 0
+	can_configure = TRUE
 
-/obj/item/card/id/centcom/station/fluff/aronai/attack_self(mob/user as mob)
+/obj/item/card/id/centcom/station/fluff/aronai/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(configured)
-		return ..()
+		return
 
 	user.set_id_info(src)
 	if(user.mind && user.mind.initial_account)
 		associated_account_number = user.mind.initial_account.account_number
-	configured = 1
+	configured = TRUE
 	to_chat(user, span_notice("Card settings set."))
 
 //Swat43:Fortune Bloise
@@ -485,7 +502,6 @@
 	flags = THICKMATERIAL
 	armor = list(melee = 40, bullet = 30, laser = 30, energy = 10, bomb = 10, bio = 0, rad = 0)
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
-	item_state = "serdyhelm_mob"
 	min_cold_protection_temperature = HELMET_MIN_COLD_PROTECTION_TEMPERATURE
 	max_heat_protection_temperature = HELMET_MAX_HEAT_PROTECTION_TEMPERATURE
 	siemens_coefficient = 0.7
@@ -560,6 +576,7 @@
 	var/mob/owner = null
 	var/client/owner_c = null //They'll be dead when we message them probably.
 	var/state = 0 //0 - New, 1 - Paired, 2 - Breaking, 3 - Broken (same as iconstates)
+	special_collar = TRUE
 
 /obj/item/clothing/accessory/collar/khcrystal/Initialize(mapload)
 	. = ..()
@@ -575,7 +592,10 @@
 	if((state > 1) || !owner)
 		STOP_PROCESSING(SSobj, src)
 
-/obj/item/clothing/accessory/collar/khcrystal/attack_self(mob/user as mob)
+/obj/item/clothing/accessory/collar/khcrystal/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(state > 0) //Can't re-pair, one time only, for security reasons.
 		to_chat(user, span_notice("The [name] doesn't do anything."))
 		return 0
@@ -669,7 +689,7 @@
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "browncane"
 	item_icons = list (slot_r_hand_str = 'icons/vore/custom_items_vr.dmi', slot_l_hand_str = 'icons/vore/custom_items_vr.dmi')
-	item_state_slots = list(slot_r_hand_str = "browncanemob_r", slot_l_hand_str = "browncanemob_l")
+	item_state_slots = list(slot_r_hand_str = "browncane_r", slot_l_hand_str = "browncane_l")
 	force = 5.0
 	throwforce = 7.0
 	w_class = ITEMSIZE_SMALL
@@ -788,7 +808,10 @@
 	icon_state = "dragor_dot"
 	w_class = ITEMSIZE_SMALL
 
-/obj/item/fluff/dragor_dot/attack_self(mob/user as mob)
+/obj/item/fluff/dragor_dot/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(user.ckey == "pontifexminimus")
 		add_verb(user, /mob/living/carbon/human/proc/shapeshifter_select_gender)
 	else
@@ -868,6 +891,7 @@
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "hisstective_badge"
 	//slot_flags = SLOT_TIE | SLOT_BELT
+	fluff_badge = TRUE
 
 /obj/item/clothing/accessory/badge/holo/detective/ruda/attack(mob/living/carbon/human/M, mob/living/user)
 	if(isliving(user))
@@ -875,8 +899,10 @@
 		user.do_attack_animation(M)
 		user.setClickCooldown(DEFAULT_QUICK_COOLDOWN) //to prevent spam
 
-/obj/item/clothing/accessory/badge/holo/detective/ruda/attack_self(mob/user as mob)
-
+/obj/item/clothing/accessory/badge/holo/detective/ruda/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(!stored_name)
 		to_chat(user, "You huff along the front of your badge, then rub your sleeve on it to polish it up.")
 		set_name(user.real_name)
@@ -894,7 +920,7 @@
 	icon_state = "centcom"
 	registered_name = "Amy Lessen"
 	assignment = "Xenobiology Director"
-	access = list(access_cent_general,access_cent_thunder,access_cent_medical,access_cent_living,access_cent_storage,access_cent_teleporter,access_research,access_xenobiology,access_maint_tunnels,access_xenoarch,access_robotics,access_tox_storage,access_tox) //Yes, this looks awful. I tried calling both central and resarch access but it didn't work.
+	access = list(ACCESS_CENT_GENERAL,ACCESS_CENT_THUNDER,ACCESS_CENT_MEDICAL,ACCESS_CENT_LIVING,ACCESS_CENT_STORAGE,ACCESS_CENT_TELEPORTER,ACCESS_RESEARCH,ACCESS_XENOBIOLOGY,ACCESS_MAINT_TUNNELS,ACCESS_XENOARCH,ACCESS_ROBOTICS,ACCESS_TOX_STORAGE,ACCESS_TOX) //Yes, this looks awful. I tried calling both central and resarch access but it didn't work.
 	age = 39
 	blood_type = "O-"
 	sex = "Female"
@@ -966,6 +992,7 @@
 	//Two Handed
 	var/wielded = 0
 	var/base_name = "stunstaff"
+	special_handling = TRUE
 
 /obj/item/melee/baton/fluff/stunstaff/Initialize(mapload)
 	. = ..()
@@ -1009,6 +1036,9 @@
 			update_held_icon()
 
 /obj/item/melee/baton/fluff/stunstaff/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(bcell && bcell.charge > hitcost)
 		status = !status
 		to_chat(user, span_notice("[src] is now [status ? "on" : "off"]."))
@@ -1028,7 +1058,7 @@
 	icon_state = "holster_stunstaff"
 	desc = "A sturdy synthetic leather sheath with matching belt and rubberized interior."
 	slot_flags = SLOT_BACK
-	item_icons = list(slot_back_str = 'icons/vore/custom_onmob_vr.dmi', slot_l_hand_str = 'icons/vore/custom_items_left_hand_vr.dmi', slot_r_hand_str = 'icons/vore/custom_items_right_hand_vr.dmi')
+	item_icons = list(slot_back_str = 'icons/vore/custom_clothes_mob.dmi', slot_l_hand_str = 'icons/vore/custom_items_left_hand_vr.dmi', slot_r_hand_str = 'icons/vore/custom_items_right_hand_vr.dmi')
 
 	can_hold = list(/obj/item/melee/baton/fluff/stunstaff)
 
@@ -1077,9 +1107,12 @@
 	edge = initial(edge)
 	w_class = initial(w_class)
 
-/obj/item/melee/fluffstuff/attack_self(mob/living/user as mob)
+/obj/item/melee/fluffstuff/attack_self(mob/living/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if (active)
-		if ((CLUMSY in user.mutations) && prob(50))
+		if (CLUMSY_HARM_CHANCE(user))
 			user.visible_message(span_danger("\The [user] accidentally cuts \himself with \the [src]."),\
 			span_danger("You accidentally cut yourself with \the [src]."))
 			user.take_organ_damage(5,5)
@@ -1223,7 +1256,7 @@
 	name = "weird necklace"
 	desc = "A necklace with a brilliantly blue crystal encased in protective glass."
 	icon = 'icons/vore/custom_clothes_vr.dmi'
-	icon_override = 'icons/vore/custom_onmob_vr.dmi'
+	default_worn_icon = 'icons/vore/custom_clothes_mob.dmi'
 	suit_type = "probably not magical"
 	icon_state = "nikkicape"
 	w_class = ITEMSIZE_SMALL // It is after all only a necklace
@@ -1277,7 +1310,6 @@
 	icon_state = "blindshades"
 
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
-	item_state = "blindshades_mob"
 
 //Storesund97 - Aurora
 /obj/item/clothing/accessory/solgov/department/security/aurora
@@ -1294,7 +1326,7 @@
 	icon_state = "shadowlaptop-open"
 	icon_state_closed = "shadowlaptop-closed"
 
-//Rboys2 - Clara Mali
+//claracow - Clara Mali
 /obj/item/reagent_containers/food/drinks/glass2/fluff/claraflask
 	name = "Clara's Vacuum Flask"
 	desc = "A rose gold vacuum flask."
@@ -1329,6 +1361,9 @@
 	var/owner = "vitoras"
 
 /obj/item/fluff/verie/attack_self(mob/living/carbon/human/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if (istype(user))
 		// It's only made for Verie's chassis silly!
 		if (user.ckey != owner)
@@ -1549,11 +1584,15 @@
 	icon_state = "pandorba"
 	pokephrase = "Gecker!"
 	attack_verb = list("fluffed", "fwomped", "fuwa'd", "squirmshed")
+	special_handling = TRUE
 
-/obj/item/toy/plushie/fluff/seona_mofuorb/attack_self(mob/user as mob)
+/obj/item/toy/plushie/fluff/seona_mofuorb/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(stored_item && opened && !searching)
 		searching = TRUE
-		if(do_after(user, 10))
+		if(do_after(user, 1 SECOND, target = src))
 			to_chat(user, "You find [icon2html(stored_item, user.client)] [stored_item] in [src]!")
 			stored_item.forceMove(get_turf(src))
 			stored_item = null
@@ -1619,7 +1658,6 @@
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "kintacts"
-	item_state = "kintacts_mob"
 
 //Bricker98: Talenya Lapushkina
 /obj/item/remote_scene_tool/tally_necklace  //A reskinned sticker for the collar, using a modified golden collar sprite

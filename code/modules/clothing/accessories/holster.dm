@@ -80,11 +80,6 @@
 /obj/item/clothing/accessory/holster/attackby(obj/item/W as obj, mob/user as mob)
 	holster(W, user)
 
-/obj/item/clothing/accessory/holster/emp_act(severity)
-	if (holstered)
-		holstered.emp_act(severity)
-	..()
-
 /obj/item/clothing/accessory/holster/examine(mob/user)
 	. = ..(user)
 	if(holstered)
@@ -169,9 +164,3 @@
 /obj/item/clothing/accessory/holster/leg/black
 	desc = "A tacticool handgun holster. Worn on the upper leg."
 	icon_state = "holster_b_leg"
-
-/obj/item/clothing/accessory/holster/leg/CC
-	desc = "A drop leg holster made of a durable synthetic leather."
-	icon_state = "holster_leg"
-	overlay_state = "holster_leg"
-	concealed_holster = 1

@@ -3,9 +3,6 @@
 	var/turf/T = get_turf(src.mob)
 	explosion(T, power)
 
-/obj
-	var/explosion_resistance
-
 /turf
 	var/explosion_resistance
 
@@ -34,4 +31,12 @@
 	explosion_resistance = 10
 
 /turf/simulated/wall
+	explosion_resistance = 10
+
+
+// Lets pretend we're plating, these should only exist at places like central.
+/turf/unsimulated
+	explosion_resistance = 1
+
+/turf/unsimulated/wall
 	explosion_resistance = 10

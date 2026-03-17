@@ -14,6 +14,8 @@
 	if(isrobot(user))
 		var/mob/living/silicon/robot/R = user
 		R.selecting_module = FALSE
+	if(!QDELETED(src))
+		qdel(src)
 
 /datum/tgui_module/robot_ui_module/tgui_interact(mob/user, datum/tgui/ui, datum/tgui/parent_ui)
 	. = ..()
@@ -51,10 +53,7 @@
 					modules |= module_name
 	data["possible_modules"] = modules
 	data["mind_name"] = R.mind.name
-	if(R.emagged)
-		data["theme"] = "syndicate"
-	else if (R.ui_theme)
-		data["theme"] = R.ui_theme
+	data["theme"] = R.get_ui_theme()
 
 	return data
 
@@ -85,7 +84,7 @@
 				model_type = "wide"
 			if(istype(S, /datum/robot_sprite/dogborg/tall))
 				model_type = "tall"
-			available_sprites += list(list("sprite" = S.name, "belly" = S.has_vore_belly_sprites, "type" = model_type))
+			UNTYPED_LIST_ADD(available_sprites, list("sprite" = S.name, "belly" = S.has_vore_belly_sprites, "type" = model_type))
 
 		data["possible_sprites"] = available_sprites
 		data["sprite_datum"] = sprite_datum

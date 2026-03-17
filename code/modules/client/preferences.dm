@@ -1,4 +1,4 @@
-var/list/preferences_datums = list()
+GLOBAL_LIST_EMPTY(preferences_datums)
 
 /datum/preferences
 	/// The path to the general savefile for this datum
@@ -19,8 +19,6 @@ var/list/preferences_datums = list()
 	var/be_special = 0					//Special role selection
 
 	//character preferences
-	var/real_name						//our character's name
-	var/nickname						//our character's nickname
 	var/b_type = DEFAULT_BLOOD_TYPE		//blood type (not-chooseable)
 	var/blood_reagents = "default"		//blood restoration reagents
 	var/headset = 1						//headset type
@@ -54,7 +52,7 @@ var/list/preferences_datums = list()
 	var/antag_vis = "Hidden"			//How visible antag association is to others.
 
 		//Mob preview
-	var/list/char_render_holders		//Should only be a key-value list of north/south/east/west = obj/screen.
+	var/list/char_render_holders		//Should only be a key-value list of north/south/east/west = atom/movable/screen.
 	var/static/list/preview_screen_locs = list(
 		"1" = "character_preview_map:2,7",
 		"2" = "character_preview_map:2,5",
@@ -160,7 +158,7 @@ var/list/preferences_datums = list()
 
 	// Didn't load a character, so let's randomize
 	set_biological_gender(pick(MALE, FEMALE))
-	real_name = random_name(identifying_gender,species)
+	update_preference_by_type(/datum/preference/name/real_name, random_name(read_preference(/datum/preference/choiced/gender/identifying), species))
 	b_type = RANDOM_BLOOD_TYPE
 
 	if(client)
@@ -177,7 +175,8 @@ var/list/preferences_datums = list()
 	return ..()
 
 /datum/preferences/proc/ShowChoices(mob/user)
-	if(!user || !user.client)	return
+	if(!user || !user.client)
+		return
 
 	if(!get_mob_by_key(client_ckey))
 		to_chat(user, span_danger("No mob exists for the given client!"))
@@ -195,14 +194,14 @@ var/list/preferences_datums = list()
 	if(!client)
 		return
 
-	var/obj/screen/setup_preview/pm_helper/PMH = LAZYACCESS(char_render_holders, "PMH")
+	var/atom/movable/screen/setup_preview/pm_helper/PMH = LAZYACCESS(char_render_holders, "PMH")
 	if(!PMH)
 		PMH = new
 		LAZYSET(char_render_holders, "PMH", PMH)
 		client.screen |= PMH
 	PMH.screen_loc = preview_screen_locs["PMH"]
 
-	var/obj/screen/setup_preview/bg/BG = LAZYACCESS(char_render_holders, "BG")
+	var/atom/movable/screen/setup_preview/bg/BG = LAZYACCESS(char_render_holders, "BG")
 	if(!BG)
 		BG = new
 		BG.plane = TURF_PLANE
@@ -214,7 +213,7 @@ var/list/preferences_datums = list()
 	BG.screen_loc = preview_screen_locs["BG"]
 
 	for(var/D in GLOB.cardinal)
-		var/obj/screen/setup_preview/O = LAZYACCESS(char_render_holders, "[D]")
+		var/atom/movable/screen/setup_preview/O = LAZYACCESS(char_render_holders, "[D]")
 		if(!O)
 			O = new
 			O.pref = src
@@ -235,7 +234,7 @@ var/list/preferences_datums = list()
 
 /datum/preferences/proc/clear_character_previews()
 	for(var/index in char_render_holders)
-		var/obj/screen/S = char_render_holders[index]
+		var/atom/movable/screen/S = char_render_holders[index]
 		client?.screen -= S
 		qdel(S)
 	char_render_holders = null
@@ -260,12 +259,12 @@ var/list/preferences_datums = list()
 
 	if(href_list["save"])
 		if(save_character())
-			to_chat(usr,span_notice("Character [player_setup?.preferences?.real_name] saved!"))
+			to_chat(usr,span_notice("Character [player_setup?.preferences?.read_preference(/datum/preference/name/real_name)] saved!"))
 		save_preferences()
 	else if(href_list["reload"])
 		load_preferences(TRUE)
 		load_character()
-		attempt_vr(client.prefs_vr,"load_vore","")
+		client.prefs_vr.load_vore()
 		sanitize_preferences()
 	else if(href_list["load"])
 		if(!IsGuestKey(usr.key))
@@ -301,7 +300,7 @@ var/list/preferences_datums = list()
 	character.set_species(species)
 	// Special Case: This references variables owned by two different datums, so do it here.
 	if(read_preference(/datum/preference/toggle/human/name_is_always_random))
-		real_name = random_name(identifying_gender,species)
+		update_preference_by_type(/datum/preference/name/real_name, random_name(read_preference(/datum/preference/choiced/gender/identifying), species))
 
 	// Ask the preferences datums to apply their own settings to the new mob
 	player_setup.copy_to_mob(character)
@@ -354,12 +353,12 @@ var/list/preferences_datums = list()
 
 	var/slotnum = charlist[choice]
 	if(!slotnum)
-		error("Player picked [choice] slot to load, but that wasn't one we sent.")
+		log_world("## ERROR Player picked [choice] slot to load, but that wasn't one we sent.")
 		return
 
 	load_preferences(TRUE)
 	load_character(slotnum)
-	attempt_vr(user.client?.prefs_vr,"load_vore","")
+	user.client?.prefs_vr.load_vore()
 	sanitize_preferences()
 	save_preferences()
 	ShowChoices(user)
@@ -395,7 +394,7 @@ var/list/preferences_datums = list()
 
 	var/slotnum = charlist[choice]
 	if(!slotnum)
-		error("Player picked [choice] slot to copy to, but that wasn't one we sent.")
+		log_world("## ERROR Player picked [choice] slot to copy to, but that wasn't one we sent.")
 		return
 
 	if(tgui_alert(user, "Are you sure you want to override slot [slotnum], [choice]'s savedata?", "Confirm Override", list("No", "Yes")) == "Yes")
@@ -404,7 +403,7 @@ var/list/preferences_datums = list()
 		save_preferences()
 		load_preferences(TRUE)
 		load_character()
-		attempt_vr(user.client?.prefs_vr,"load_vore","")
+		user.client?.prefs_vr.load_vore()
 		ShowChoices(user)
 
 /datum/preferences/proc/vanity_copy_to(var/mob/living/carbon/human/character, var/copy_name, var/copy_flavour = TRUE, var/copy_ooc_notes = FALSE, var/convert_to_prosthetics = FALSE, var/apply_bloodtype = TRUE)
@@ -424,20 +423,21 @@ var/list/preferences_datums = list()
 	blood color
 	*/
 	if (copy_name)
+		var/char_real_name = read_preference(/datum/preference/name/real_name)
 		if(CONFIG_GET(flag/humans_need_surnames))
-			var/firstspace = findtext(real_name, " ")
-			var/name_length = length(real_name)
+			var/firstspace = findtext(char_real_name, " ")
+			var/name_length = length(char_real_name)
 			if(!firstspace)	//we need a surname
-				real_name += " [pick(GLOB.last_names)]"
+				char_real_name += " [pick(GLOB.last_names)]"
 			else if(firstspace == name_length)
-				real_name += "[pick(GLOB.last_names)]"
-		character.real_name = real_name
+				char_real_name += "[pick(GLOB.last_names)]"
+		character.real_name = char_real_name
 		character.name = character.real_name
 		if(character.dna)
 			character.dna.real_name = character.real_name
-		character.nickname = nickname
-	character.gender = biological_gender
-	character.identifying_gender = identifying_gender
+		character.nickname = read_preference(/datum/preference/name/nickname)
+	character.gender = read_preference(/datum/preference/choiced/gender/biological)
+	character.identifying_gender = read_preference(/datum/preference/choiced/gender/identifying)
 
 	character.h_style	= h_style
 
@@ -502,12 +502,15 @@ var/list/preferences_datums = list()
 	wing_color3.apply_pref_to(character, read_preference(/datum/preference/color/human/wing_color3))
 
 	var/datum/preference/numeric/wing_alpha = GLOB.preference_entries[/datum/preference/numeric/human/wing_alpha]
-	wing_alpha.apply_pref_to(character,read_preference(/datum/preference/numeric/human/wing_alpha))
+	wing_alpha.apply_pref_to(character, read_preference(/datum/preference/numeric/human/wing_alpha))
 
 	var/datum/preference/numeric/skin_color = GLOB.preference_entries[/datum/preference/color/human/skin_color]
-	skin_color.apply_pref_to(character,read_preference(/datum/preference/color/human/skin_color))
+	skin_color.apply_pref_to(character, read_preference(/datum/preference/color/human/skin_color))
 
-	character.set_gender(biological_gender)
+	var/datum/preference/color/human/eyes_color = GLOB.preference_entries[/datum/preference/color/human/eyes_color]
+	eyes_color.apply_pref_to(character, read_preference(/datum/preference/color/human/eyes_color))
+
+	character.set_gender(read_preference(/datum/preference/choiced/gender/biological))
 
 	// Destroy/cyborgize organs and limbs.
 	if (convert_to_prosthetics) //should only really be run for proteans
@@ -553,7 +556,8 @@ var/list/preferences_datums = list()
 		for(var/BP in mark_datum.body_parts)
 			var/obj/item/organ/external/O = character.organs_by_name[BP]
 			if(O)
-				if(!islist(body_markings[M][BP])) continue
+				if(!islist(body_markings[M][BP]))
+					continue
 				O.markings[M] = list("color" = body_markings[M][BP]["color"], "datum" = mark_datum, "priority" = priority, "on" = body_markings[M][BP]["on"])
 	character.markings_len = priority
 
@@ -585,8 +589,10 @@ var/list/preferences_datums = list()
 
 	var/list/traits_to_copy = list(/datum/trait/neutral/tall,
 									/datum/trait/neutral/taller,
+									/datum/trait/neutral/tallest,
 									/datum/trait/neutral/short,
 									/datum/trait/neutral/shorter,
+									/datum/trait/neutral/shortest,
 									/datum/trait/neutral/obese,
 									/datum/trait/neutral/fat,
 									/datum/trait/neutral/thin,
@@ -603,9 +609,10 @@ var/list/preferences_datums = list()
 				var/datum/trait/instance = GLOB.all_traits[trait]
 				if (!instance)
 					continue
-				for (var/to_edit in instance.var_changes)
-					character.species.vars[to_edit] = instance.var_changes[to_edit]
+				for(var/key, value in instance.var_changes)
+					character.species.vars[key] = value
 	character.update_transform()
+
 	if(!voice_sound)
 		character.voice_sounds_list = DEFAULT_TALK_SOUNDS
 	else
@@ -625,7 +632,7 @@ var/list/preferences_datums = list()
 	character.species.deform = character.species.get_icobase(get_deform = TRUE)
 	character.species.vanity_base_fit = bodytype_selected
 	if(istype(character.species, /datum/species/shapeshifter))
-		wrapped_species_by_ref["\ref[character]"] = bodytype_selected
+		GLOB.wrapped_species_by_ref["\ref[character]"] = bodytype_selected
 
 	character.custom_species	= custom_species
 	character.custom_say		= lowertext(trim(custom_say))

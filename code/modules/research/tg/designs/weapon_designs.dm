@@ -369,6 +369,31 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SECURITY | DEPARTMENT_BITFLAG_SCIENCE
 
+/datum/design_techweb/sizenetgun
+	name = "Varmint Compactor"
+	desc  = "The \"Varmint Compactor\" is an energy net projector designed to immobilize its targets while simultaneously reducing them to a more manageable size."
+	id = "sizenetgun"
+	build_type = PROTOLATHE
+	materials = list(MAT_STEEL = 6000, MAT_GLASS = 4000)
+	build_path = /obj/item/gun/energy/netgun/shrink
+	category = list(
+		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_RANGED
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SECURITY | DEPARTMENT_BITFLAG_SCIENCE
+
+/datum/design_techweb/bola_gun
+	name = "Bola Blaster"
+	desc  = "The \"Bola Blaster\" is an energy net projector designed to immobilize humanoid creatures."
+	id = "bolablaster"
+	// req_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 5, TECH_MAGNET = 3)
+	build_type = PROTOLATHE
+	materials = list(MAT_STEEL = 6000, MAT_GLASS = 3000)
+	build_path = /obj/item/gun/energy/bolagun
+	category = list(
+		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_RANGED
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SECURITY | DEPARTMENT_BITFLAG_SCIENCE
+
 // Misc weapons
 
 /datum/design_techweb/pummeler
@@ -858,6 +883,17 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL | DEPARTMENT_BITFLAG_SCIENCE
 
+/datum/design_techweb/medigun_constant
+	name = "Prototype Bluespace Medigun Backpack"
+	id = "medigun_constant"
+	build_type = PROTOLATHE
+	materials = list(MAT_STEEL = 8000, MAT_PLASTIC = 8000, MAT_GLASS = 5000, MAT_SILVER = 1000, MAT_GOLD = 1000, MAT_URANIUM = 1000)
+	build_path = /obj/item/medigun_backpack
+	category = list(
+		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_RANGED
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL | DEPARTMENT_BITFLAG_SCIENCE
+
 /datum/design_techweb/upgradeAOE
 	name = "Mining Explosion Upgrade"
 	desc = "An area of effect upgrade for the Proto-Kinetic Accelerator."
@@ -920,6 +956,17 @@
 	build_type = PROTOLATHE
 	materials = list(MAT_STEEL = 3500, MAT_GLASS = 3500, MAT_PHORON = 1500, MAT_DIAMOND = 1500)
 	build_path = /obj/item/xenobio/monkey_gun
+	category = list(
+		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_RANGED
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
+
+/datum/design_techweb/anomaly_gun
+	name = "Handheld Anomalous Particle Releaser"
+	id = "anom_gun"
+	build_type = PROTOLATHE
+	materials = list(MAT_STEEL = 4000, MAT_GLASS = 3500, MAT_PHORON = 1500, MAT_DIAMOND = 1500, MAT_URANIUM = 1500)
+	build_path = /obj/item/gun/energy/anomaly
 	category = list(
 		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_RANGED
 	)
