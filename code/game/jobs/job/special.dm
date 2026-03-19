@@ -16,7 +16,7 @@
 	outfit_type = /datum/decl/hierarchy/outfit/job/centcom_officer
 	job_description = "A Central Command Officer is there on official business. Most of time. Whatever it is, they're a VIP."
 
-	minimum_character_age = 25
+	minimum_character_age = 16
 	ideal_character_age = 40
 
 	pto_type = PTO_CIVILIAN

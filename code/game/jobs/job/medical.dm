@@ -24,7 +24,7 @@
 				ACCESS_KEYCARD_AUTH, ACCESS_PSYCHIATRIST, ACCESS_EVA, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_MAINT_TUNNELS, ACCESS_GATEWAY)
 	alt_titles = list(JOB_ALT_CHIEF_PHYSICIAN = /datum/alt_title/chief_physician, JOB_ALT_MEDICAL_DIRECTOR = /datum/alt_title/medical_director, JOB_ALT_HEALTHCARE_MANAGER = /datum/alt_title/healthcare_manager)
 
-	minimum_character_age = 25
+	minimum_character_age = 16
 	min_age_by_species = list(SPECIES_UNATHI = 70, FBP_MECHANICAL = 10, SPECIES_HUMAN_VATBORN = 14)
 	minimal_player_age = 10
 	ideal_character_age = 50
