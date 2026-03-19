@@ -13817,6 +13817,18 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/monotile,
 /area/hydroponics)
+"EB" = (
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/airless,
+/area/stellardelight/deck2/exterior)
 "EC" = (
 /obj/structure/table/woodentable,
 /obj/item/paper_bin{
@@ -14159,7 +14171,8 @@
 /area/quartermaster/qm)
 "Fo" = (
 /obj/machinery/power/solar_control{
-	dir = 4
+	dir = 4;
+	auto_start = 1
 	},
 /obj/structure/cable{
 	icon_state = "0-4"
@@ -15432,6 +15445,18 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/storage)
+"HU" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/airless,
+/area/stellardelight/deck2/exterior)
 "HV" = (
 /obj/machinery/washing_machine,
 /turf/simulated/floor/tiled/dark,
@@ -16708,6 +16733,15 @@
 	},
 /turf/simulated/floor/tiled/eris/dark/orangecorner,
 /area/engineering/engine_eva)
+"KO" = (
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/airless,
+/area/stellardelight/deck2/exterior)
 "KP" = (
 /obj/structure/cable/cyan{
 	icon_state = "2-8"
@@ -17034,7 +17068,8 @@
 /area/hydroponics)
 "LB" = (
 /obj/machinery/power/solar_control{
-	dir = 8
+	dir = 8;
+	auto_start = 1
 	},
 /obj/structure/cable{
 	icon_state = "0-8"
@@ -19138,6 +19173,15 @@
 	},
 /turf/simulated/floor/tiled/eris/steel/cargo,
 /area/quartermaster/storage)
+"Qb" = (
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/airless,
+/area/stellardelight/deck2/exterior)
 "Qc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	dir = 5
@@ -21853,6 +21897,7 @@
 /obj/effect/floor_decal/milspec/color/green/half{
 	dir = 8
 	},
+/mob/living/bot/farmbot,
 /turf/simulated/floor/tiled,
 /area/hydroponics)
 "Wq" = (
@@ -29451,7 +29496,7 @@ Uh
 Uh
 Uh
 Uh
-NL
+KO
 Ig
 Ig
 Ig
@@ -29593,7 +29638,7 @@ Cq
 Cq
 Cq
 Cq
-NL
+Cf
 Cq
 Cq
 Cq
@@ -29735,7 +29780,7 @@ qG
 Uh
 Uh
 Uh
-NL
+HU
 Ig
 Ig
 Ig
@@ -29877,7 +29922,7 @@ SO
 Mx
 Mx
 Mx
-NL
+Cf
 Mx
 Mx
 Mx
@@ -36977,7 +37022,7 @@ kL
 yH
 yH
 yH
-NL
+Cf
 yH
 yH
 yH
@@ -37119,7 +37164,7 @@ wr
 Uh
 Uh
 Uh
-NL
+EB
 Ig
 Ig
 Ig
@@ -37261,7 +37306,7 @@ Cp
 Cp
 Cp
 Cp
-NL
+Cf
 Cp
 Cp
 Cp
@@ -37403,7 +37448,7 @@ Uh
 Uh
 Uh
 Uh
-NL
+Qb
 MN
 MN
 MN

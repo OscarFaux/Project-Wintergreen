@@ -11470,9 +11470,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/warden)
 "xB" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
 /obj/structure/closet/crate/bin{
 	anchored = 1
 	},
@@ -36505,7 +36502,7 @@ iq
 iq
 iq
 iq
-xB
+Cj
 LY
 FE
 Cs
@@ -37214,7 +37211,7 @@ Uz
 Vp
 Sx
 aG
-iq
+xB
 dx
 LY
 Cm
