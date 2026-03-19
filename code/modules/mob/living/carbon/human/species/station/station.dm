@@ -18,7 +18,7 @@
 	name_language = null // Use the first-name last-name generator rather than a language scrambler
 	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_SKRELLIAN, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX, LANGUAGE_PROMETHEAN)
 
-	min_age = 14
+	min_age = 18
 	max_age = 130
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
@@ -230,7 +230,7 @@
 	can_climb = TRUE
 	climbing_delay = 1.00 //Cats are good climbers.
 
-	min_age = 14
+	min_age = 18
 	max_age = 80
 
 	economic_modifier = 10
@@ -349,7 +349,7 @@
 
 	water_movement = -3
 
-	min_age = 14
+	min_age = 18
 	max_age = 130
 
 	economic_modifier = 10
@@ -461,7 +461,7 @@
 
 	economic_modifier = 3
 
-	min_age = 14
+	min_age = 18
 	max_age = 90
 
 	blurb = "The Zaddat are an Unathi client race only recently introduced to SolGov space. Having evolved on \
@@ -733,7 +733,7 @@
 	color_mult = 1
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair)
 
-	min_age = 14
+	min_age = 18
 	max_age = 110
 
 	species_sounds = "Canine"
@@ -800,7 +800,7 @@
 	color_mult = 1
 	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX, LANGUAGE_PROMETHEAN)
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair, /mob/living/carbon/human/proc/water_stealth, /mob/living/carbon/human/proc/underwater_devour)
-	min_age = 14
+	min_age = 18
 	max_age = 80
 
 	blurb = "The Akula are a species of amphibious humanoids like the Skrell, but have an appearance very similar to that of a shark. \
@@ -852,7 +852,7 @@
 		/mob/living/proc/flying_vore_toggle,
 		/mob/living/proc/start_wings_hovering,
 		/mob/living/carbon/human/proc/tie_hair)
-	min_age = 14
+	min_age = 18
 	max_age = 80
 
 	blurb = "Nevreans are a race of avian and dinosaur-like creatures living on Tal. They belong to a group of races that hails from Eltus, \
@@ -897,7 +897,7 @@
 		/mob/living/proc/shred_limb,
 		/mob/living/carbon/human/proc/tie_hair)
 
-	min_age = 14
+	min_age = 20
 	max_age = 80
 
 	species_sounds = "Vulpine"
@@ -1005,7 +1005,7 @@
 	flesh_color = "#966464"
 	base_color = "#B43214"
 
-	min_age = 14
+	min_age = 18
 	max_age = 80
 
 	heat_discomfort_strings = list(
@@ -1019,7 +1019,7 @@
 	icobase = 'icons/mob/human_races/r_skrell_vr.dmi'
 	deform = 'icons/mob/human_races/r_def_skrell_vr.dmi'
 	color_mult = 1
-	min_age = 14
+	min_age = 20
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair, /mob/living/carbon/human/proc/water_stealth, /mob/living/carbon/human/proc/underwater_devour)
 	reagent_tag = null
 	allergens = null
@@ -1057,7 +1057,7 @@
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 	inherent_verbs = list(/mob/living/proc/flying_toggle,/mob/living/proc/flying_vore_toggle,/mob/living/proc/start_wings_hovering,/mob/living/carbon/human/proc/tie_hair)
 
-	min_age = 14 //not a typo, Rapala consider adult age to be 19
+	min_age = 19 //not a typo, Rapala consider adult age to be 19
 	max_age = 80
 
 	soft_landing = TRUE
@@ -1099,7 +1099,7 @@
 	name_language = LANGUAGE_SCHECHI
 	species_language = LANGUAGE_SCHECHI
 
-	min_age = 14
+	min_age = 18
 	max_age = 80
 
 	economic_modifier = 6 //I noticed this and the other mods were not the same, but we use ECO_MODIFIER for our calculation instead on virgo. In case anyone finds this and wonders why tesh are getting 60% of the pay (they aren't)
@@ -1413,7 +1413,7 @@
 	species_language = LANGUAGE_TERMINUS
 	inherent_verbs = list(/mob/living/carbon/human/proc/lick_wounds,/mob/living/proc/shred_limb,/mob/living/carbon/human/proc/tie_hair)
 
-	min_age = 14
+	min_age = 18
 	max_age = 80
 
 	species_sounds = "Vulpine"
@@ -1485,7 +1485,7 @@
 	color_mult = 1
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair)
 
-	min_age = 14
+	min_age = 18
 	max_age = 80
 
 	species_sounds = "Mouse"
@@ -1559,7 +1559,7 @@
 	inherent_verbs = list(
 	/mob/living/carbon/human/proc/tie_hair)
 
-	min_age = 14
+	min_age = 18
 	max_age = 80
 
 	blurb = "Vasilissans are a tall, lanky, spider like people. \
@@ -1635,7 +1635,7 @@
 	can_climb = TRUE
 	climbing_delay = 1
 
-	min_age = 14
+	min_age = 18
 	max_age = 200
 
 	species_sounds = "Canine"
@@ -1702,7 +1702,7 @@
 		/mob/living/carbon/human/proc/lick_wounds)		//Xenochimera get all the special verbs since they can't select traits.
 
 	virus_immune = 1 // They practically ARE one.
-	min_age = 14
+	min_age = 18
 	max_age = 80
 
 	species_sounds = "Unset" // Chimera get a default/safety of unset, going off their icon base if there's none overriding.
@@ -1798,7 +1798,7 @@
 	color_mult = 1
 	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX, LANGUAGE_PROMETHEAN)
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair, /mob/living/proc/toggle_sparkles, /mob/living/proc/healing_rainbows, /mob/living/carbon/human/proc/play_dead)
-	min_age = 14
+	min_age = 18
 	max_age = 21
 
 	pass_flags = PASSTABLE

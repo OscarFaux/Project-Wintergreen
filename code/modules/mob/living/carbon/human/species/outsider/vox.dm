@@ -23,7 +23,7 @@
 	catalogue_data = list(/datum/category_item/catalogue/fauna/vox)
 
 //	taste_sensitivity = TASTE_DULL
-	min_age = 15
+	min_age = 18
 
 	slowdown = -0.5
 

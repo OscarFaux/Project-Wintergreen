@@ -17,7 +17,7 @@
 	species_language = LANGUAGE_LLEILL
 	secondary_langs = list(LANGUAGE_LLEILL, LANGUAGE_SOL_COMMON)	// For some reason, having this as their species language does not allow it to be chosen.
 
-	min_age = 15
+	min_age = 18
 	max_age = 200
 
 	//Specific abilities

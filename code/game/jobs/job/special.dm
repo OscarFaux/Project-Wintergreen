@@ -42,7 +42,7 @@
 	outfit_type = /datum/decl/hierarchy/outfit/job/emergency_responder
 	job_description = "Emergency Responders are usually called in to deal with on-station emergencies that the crew require assistance to deal with."
 
-	minimum_character_age = 16
+	minimum_character_age = 18
 	ideal_character_age = 30
 
 	pto_type = PTO_CIVILIAN
