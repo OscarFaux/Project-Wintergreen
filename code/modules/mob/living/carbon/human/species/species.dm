@@ -58,7 +58,7 @@
 	var/allergen_damage_severity = 2.5							// How bad are reactions to the allergen? Touch with extreme caution.
 	var/allergen_disable_severity = 10							// Whilst this determines how long nonlethal effects last and how common emotes are.
 
-	var/min_age = 18
+	var/min_age = 15
 	var/max_age = 70
 
 	var/icodigi = 'icons/mob/human_races/r_digi.dmi'
