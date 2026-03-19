@@ -288,6 +288,9 @@
 /datum/alt_title/helmsman
 	title = JOB_ALT_HELMSMAN
 
+/datum/alt_title/astrogator
+	title = JOB_ALT_ASTROGATOR
+
 /datum/job/pilot/get_request_reasons()
 	return list("Assembling expedition team")
 

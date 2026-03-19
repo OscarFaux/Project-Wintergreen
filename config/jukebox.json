@@ -15,7 +15,7 @@
 		"duration": 1180,
 		"artist": "Cboyardee",
 		"secret": false,
-		"lobby": true,
+		"lobby": false,
 		"jukebox": true,
 		"genre": "Electronic"
 	},
@@ -25,7 +25,7 @@
 		"duration": 2450,
 		"artist": "Jeroen Tel (Remixed by Cuboos)",
 		"secret": false,
-		"lobby": true,
+		"lobby": false,
 		"jukebox": true,
 		"genre": "Electronic"
 	},
@@ -515,7 +515,7 @@
 		"duration": 1340,
 		"artist": "Leslie Fish",
 		"secret": false,
-		"lobby": true,
+		"lobby": false,
 		"jukebox": true,
 		"genre": "Folk and Indie"
 	},
@@ -525,7 +525,7 @@
 		"duration": 2660,
 		"artist": "Duane Elms",
 		"secret": false,
-		"lobby": true,
+		"lobby": false,
 		"jukebox": true,
 		"genre": "Folk and Indie"
 	},
@@ -535,7 +535,7 @@
 		"duration": 1700,
 		"artist": "Leslie Fish",
 		"secret": false,
-		"lobby": true,
+		"lobby": false,
 		"jukebox": true,
 		"genre": "Folk and Indie"
 	},
@@ -2225,7 +2225,7 @@
 		"duration": 3180,
 		"artist": "David Bowie",
 		"secret": false,
-		"lobby": true,
+		"lobby": false,
 		"jukebox": true,
 		"genre": "Rock"
 	},
@@ -2255,7 +2255,7 @@
 		"duration": 3330,
 		"artist": "Chris Hadfield",
 		"secret": false,
-		"lobby": true,
+		"lobby": false,
 		"jukebox": true,
 		"genre": "Pop"
 	},
@@ -2865,7 +2865,7 @@
 		"duration": 2730,
 		"artist": "Hall & Oates",
 		"secret": false,
-		"lobby": true,
+		"lobby": false,
 		"jukebox": true,
 		"genre": "Pop"
 	},
@@ -3945,7 +3945,7 @@
 		"artist": "Network Music Ensemble",
 		"genre": "Rock",
 		"secret": false,
-		"lobby": true,
+		"lobby": false,
 		"jukebox": true
 	},
 	{
@@ -4005,7 +4005,7 @@
 		"artist": "Fiona Apple",
 		"genre": "Electronic",
 		"secret": false,
-		"lobby": true,
+		"lobby": false,
 		"jukebox": true
 	},
 	{
@@ -4015,7 +4015,7 @@
 		"artist": "Kamil Hala, Slovak Philharmonic Orchestra, Libor Pešek",
 		"genre": "Classical and Orchestral",
 		"secret": false,
-		"lobby": true,
+		"lobby": false,
 		"jukebox": true
 	},
 	{
@@ -4155,7 +4155,7 @@
 		"artist": "Julia Ecklar & Anne Prather",
 		"genre": "Folk and Indie",
 		"secret": false,
-		"lobby": true,
+		"lobby": false,
 		"jukebox": true
 	},
 	{
@@ -4205,7 +4205,7 @@
 		"artist": "Free Fall & Other Delights",
 		"genre": "Folk and Indie",
 		"secret": false,
-		"lobby": true,
+		"lobby": false,
 		"jukebox": true
 	},
 	{
@@ -4225,7 +4225,7 @@
 		"artist": "Duane Elms",
 		"genre": "Folk and Indie",
 		"secret": false,
-		"lobby": true,
+		"lobby": false,
 		"jukebox": true
 	},
 	{
@@ -4235,7 +4235,7 @@
 		"artist": "Duane Elms",
 		"genre": "Folk and Indie",
 		"secret": false,
-		"lobby": true,
+		"lobby": false,
 		"jukebox": true
 	},
 	{
@@ -4245,7 +4245,7 @@
 		"artist": "Duane Elms",
 		"genre": "Folk and Indie",
 		"secret": false,
-		"lobby": true,
+		"lobby": false,
 		"jukebox": true
 	},
 	{
@@ -4336,6 +4336,326 @@
 		"genre": "Folk and Indie",
 		"secret": true,
 		"lobby": false,
+		"jukebox": true
+	},
+	{
+		"url": "https://files.catbox.moe/h2d2hx.mp3",
+		"title": "Old L.A. 2040(Black Disk Ver)",
+		"duration": 4429,
+		"artist": "Tappi Iwase",
+		"genre": "Electronic",
+		"secret": false,
+		"lobby": false,
+		"jukebox": true
+	},
+	{
+		"url": "https://files.catbox.moe/4zid5g.mp3",
+		"title": "Old L.A. 2040",
+		"duration": 4385,
+		"artist": "Tappi Iwase",
+		"genre": "Electronic",
+		"secret": false,
+		"lobby": false,
+		"jukebox": true
+	},
+	{
+		"url": "https://files.catbox.moe/h6ej3t.mp3",
+		"title": "Nightmare",
+		"duration": 1815,
+		"artist": "Plenka",
+		"genre": "Electronic",
+		"secret": false,
+		"lobby": false,
+		"jukebox": true
+	},
+	{
+		"url": "https://files.catbox.moe/0dskpa.mp3",
+		"title": "Assassin's Creed",
+		"duration": 1520,
+		"artist": "The Flight",
+		"genre": "Video Game",
+		"secret": false,
+		"lobby": false,
+		"jukebox": true
+	},
+	{
+		"url": "https://files.catbox.moe/pg4kqz.mp3",
+		"title": "Hyrule Field",
+		"duration": 3010,
+		"artist": "The Flight",
+		"genre": "Video Game",
+		"secret": false,
+		"lobby": false,
+		"jukebox": true
+	},
+	{
+		"url": "https://files.catbox.moe/phtlv5.mp3",
+		"title": "Steins gate instrumental",
+		"duration": 2240,
+		"artist": "WingWing",
+		"genre": "Anime",
+		"secret": false,
+		"lobby": false,
+		"jukebox": true
+	},
+	{
+		"url": "https://files.catbox.moe/v2c0di.mp3",
+		"title": "Belts Go Brrrrr",
+		"duration": 2900,
+		"artist": "Peppsen",
+		"genre": "Video Game",
+		"secret": false,
+		"lobby": false,
+		"jukebox": true
+	},
+	{
+		"url": "https://files.catbox.moe/qtgyya.mp3",
+		"title": "Like Flames",
+		"duration": 2500,
+		"artist": "MindaRyn",
+		"genre": "Anime",
+		"secret": false,
+		"lobby": false,
+		"jukebox": true
+	},
+	{
+		"url": "https://files.catbox.moe/xtwq99.mp3",
+		"title": "Triage at Dawn(Extended)",
+		"duration": 6800,
+		"artist": "ValvE",
+		"genre": "Video Game",
+		"secret": false,
+		"lobby": false,
+		"jukebox": true
+	},
+	{
+		"url": "https://files.catbox.moe/zu18c3.mp3",
+		"title": "Trench Warfare",
+		"duration": 1230,
+		"artist": "Salar'Hb",
+		"genre": "Anime",
+		"secret": false,
+		"lobby": false,
+		"jukebox": true
+	},
+	{
+		"url": "https://files.catbox.moe/iokr8x.mp3",
+		"title": "Please Please",
+		"duration": 2200,
+		"artist": "Lantis",
+		"genre": "Anime",
+		"secret": false,
+		"lobby": false,
+		"jukebox": true
+	},
+	{
+		"url": "https://files.catbox.moe/zoit53.mp3",
+		"title": "After Dark",
+		"duration": 2570,
+		"artist": "Mr Kitty",
+		"genre": "Pop",
+		"secret": false,
+		"lobby": false,
+		"jukebox": true
+	},
+	{
+		"url": "https://files.catbox.moe/3njt6j.mp3",
+		"title": "Dawn Approaches",
+		"duration": 2500,
+		"artist": "Garoad",
+		"genre": "Electronic",
+		"secret": false,
+		"lobby": true,
+		"jukebox": true
+	},
+	{
+		"url": "https://files.catbox.moe/xicyo3.mp3",
+		"title": "A Gaze That Invited Disaster",
+		"duration": 2240,
+		"artist": "Garoad",
+		"genre": "Electronic",
+		"secret": false,
+		"lobby": false,
+		"jukebox": true
+	},
+	{
+		"url": "https://files.catbox.moe/670ij5.mp3",
+		"title": "Everything will be OK",
+		"duration": 1430,
+		"artist": "Garoad",
+		"genre": "Ambience",
+		"secret": false,
+		"lobby": false,
+		"jukebox": true
+	},
+	{
+		"url": "https://files.catbox.moe/zkvefb.mp3",
+		"title": "Oshi no Ko",
+		"duration": 2280,
+		"artist": "Queen Bee",
+		"genre": "Anime",
+		"secret": true,
+		"lobby": false,
+		"jukebox": true
+	},
+	{
+		"url": "https://files.catbox.moe/9zwju5.mp3",
+		"title": "Avid",
+		"duration": 2510,
+		"artist": "Swano Hirouki",
+		"genre": "Anime",
+		"secret": false,
+		"lobby": false,
+		"jukebox": true
+	},
+	{
+		"url": "https://files.catbox.moe/yqbn74.mp3",
+		"title": "Sacrafice",
+		"duration": 1590,
+		"artist": "Jeremiah Acacius",
+		"genre": "Anime",
+		"secret": false,
+		"lobby": false,
+		"jukebox": true
+	},
+	{
+		"url": "https://files.catbox.moe/h6ji9u.mp3",
+		"title": "Aiden Melt Down",
+		"duration": 2430,
+		"artist": "Enako",
+		"genre": "Anime",
+		"secret": false,
+		"lobby": false,
+		"jukebox": true
+	},
+	{
+		"url": "https://files.catbox.moe/milqmy.mp3",
+		"title": "Tears of Orphans",
+		"duration": 3450,
+		"artist": "Shiro Sagisu",
+		"genre": "Anime",
+		"secret": false,
+		"lobby": false,
+		"jukebox": true
+	},
+	{
+		"url": "https://files.catbox.moe/5phiy9.mp3",
+		"title": "Shattered",
+		"duration": 2295,
+		"artist": "Vulta",
+		"genre": "Electronic",
+		"secret": false,
+		"lobby": false,
+		"jukebox": true
+	},
+	{
+		"url": "https://files.catbox.moe/k9ykhn.mp3",
+		"title": "Gift Shop",
+		"duration": 1764,
+		"artist": "Wotal",
+		"genre": "Ambience",
+		"secret": false,
+		"lobby": false,
+		"jukebox": true
+	},
+	{
+		"url": "http://calicomp.live:27017/uploads/872974434946908161/Say_so_JP.mp3",
+		"title": "Say So (JP)",
+		"duration": 3200,
+		"artist": "Raimych",
+		"genre": "Pop",
+		"secret": false,
+		"lobby": false,
+		"jukebox": true
+	},
+	{
+		"url": "http://calicomp.live:27017/uploads/872974434946908161/Say_so_slowed.mp3",
+		"title": "Say So",
+		"duration": 3180,
+		"artist": "Cat",
+		"genre": "Pop",
+		"secret": false,
+		"lobby": false,
+		"jukebox": true
+	},
+	{
+		"url": "http://calicomp.live:27017/uploads/872974434946908161/Desertsandsfull.m4a",
+		"title": "The disciples of the New World.",
+		"duration": 46520,
+		"artist": "Desert Sands feel warm at night",
+		"genre": "Ambience",
+		"secret": false,
+		"lobby": false,
+		"jukebox": true
+	},
+	{
+		"url": "http://calicomp.live:27017/uploads/ready/dreams.mp3",
+		"title": "Hopes and Dreams",
+		"duration": 470,
+		"artist": "Garoad",
+		"genre": "Electronic",
+		"secret": false,
+		"lobby": true,
+		"jukebox": true
+	},
+	{
+		"url": "http://calicomp.live:27017/uploads/ready/glow.mp3",
+		"title": "A Neon Glow Lights the Way",
+		"duration": 1520,
+		"artist": "Garoad",
+		"genre": "Electronic",
+		"secret": false,
+		"lobby": true,
+		"jukebox": true
+	},
+	{
+		"url": "http://calicomp.live:27017/uploads/ready/shinespark.mp3",
+		"title": "Shine Spark",
+		"duration": 3010,
+		"artist": "Garoad",
+		"genre": "Electronic",
+		"secret": false,
+		"lobby": true,
+		"jukebox": true
+	},
+	{
+		"url": "http://calicomp.live:27017/uploads/ready/shinesparki.mp3",
+		"title": "Shine Spark - Instrumental",
+		"duration": 3010,
+		"artist": "Garoad",
+		"genre": "Electronic",
+		"secret": false,
+		"lobby": true,
+		"jukebox": true
+	},
+	{
+		"url": "http://calicomp.live:27017/uploads/ready/systemsgo.mp3",
+		"title": "All systems, Go!",
+		"duration": 2210,
+		"artist": "Garoad",
+		"genre": "Electronic",
+		"secret": false,
+		"lobby": true,
+		"jukebox": true
+	},
+	{
+		"url": "http://calicomp.live:27017/uploads/ready/glitchcity.mp3",
+		"title": "Glitch City",
+		"duration": 1460,
+		"artist": "Garoad",
+		"genre": "Electronic",
+		"secret": false,
+		"lobby": true,
+		"jukebox": true
+	},
+	{
+		"url": "https://files.catbox.moe/ldk8x1.mp3",
+		"title": "Bad things could happen",
+		"duration": 690,
+		"artist": "Karbonic",
+		"genre": "Ambience",
+		"secret": false,
+		"lobby": true,
 		"jukebox": true
 	},
 	{

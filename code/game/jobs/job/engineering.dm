@@ -16,7 +16,7 @@
 	req_admin_notify = 1
 	economic_modifier = 10
 
-	minimum_character_age = 25
+	minimum_character_age = 16
 	min_age_by_species = list(SPECIES_UNATHI = 70, FBP_MECHANICAL = 10, SPECIES_HUMAN_VATBORN = 14)
 	ideal_character_age = 50
 	ideal_age_by_species = list(SPECIES_UNATHI = 140, FBP_MECHANICAL = 20, SPECIES_HUMAN_VATBORN = 20)

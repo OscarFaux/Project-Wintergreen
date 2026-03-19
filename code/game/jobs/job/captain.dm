@@ -22,7 +22,7 @@ GLOBAL_DATUM_INIT(captain_announcement, /datum/announcement/minor, new(do_newsca
 	minimal_player_age = 14
 	economic_modifier = 20
 
-	minimum_character_age = 25
+	minimum_character_age = 16
 	min_age_by_species = list(SPECIES_HUMAN_VATBORN = 14)
 	ideal_character_age = 70 // Old geezer captains ftw
 	ideal_age_by_species = list(SPECIES_HUMAN_VATBORN = 55) /// Vatborn live shorter, no other race eligible for captain besides human/skrell
@@ -85,7 +85,7 @@ GLOBAL_DATUM_INIT(captain_announcement, /datum/announcement/minor, new(do_newsca
 	minimal_player_age = 10
 	economic_modifier = 10
 
-	minimum_character_age = 25
+	minimum_character_age = 16
 	min_age_by_species = list(SPECIES_UNATHI = 70, SPECIES_TESHARI = 20, FBP_MECHANICAL = 10, SPECIES_HUMAN_VATBORN = 14)
 	ideal_character_age = 50
 	ideal_age_by_species = list(SPECIES_UNATHI = 140, SPECIES_TESHARI = 27, FBP_MECHANICAL = 20, SPECIES_HUMAN_VATBORN = 20)
